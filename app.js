@@ -22,7 +22,7 @@ const session = require('express-session');
 const mongodbStore=require("connect-mongodb-session")(session)
 const csrf=require("csurf")
 
-const helmet = require('helmet')
+// const helmet = require('helmet')
 var compression = require('compression')
 var morgan = require('morgan')
 
@@ -118,7 +118,7 @@ app.use(bodyParser.urlencoded({
     { flags: 'a' }
   );
 
-  app.use(helmet());
+  // app.use(helmet());
   app.use(compression());
   app.use(morgan('combined', { stream: accessLogStream }));
 
