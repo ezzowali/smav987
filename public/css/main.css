@@ -1,0 +1,384 @@
+
+        .carousel-item {
+          height: 100vh;
+          min-height: 300px;
+          background: no-repeat center center scroll;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-color: #cfe5f4;
+        }
+        .carousel-caption {
+          bottom: 270px;
+        }
+        
+        .carousel-caption h5 {
+          font-size: 45px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-top: 25px;
+        }
+        
+        .carousel-caption p {
+          width: 75%;
+          margin: auto;
+          font-size: 18px;
+          line-height: 1.9;
+        }
+        
+        .navbar-light .navbar-brand {
+          color: #fff;
+          font-size: 25px;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+        
+        .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+          color: #fff;
+        }
+        
+        .navbar-light .navbar-nav .nav-link {
+          color: #fff;
+        }
+        
+        .navbar-toggler {
+          background: #fff;
+        }
+        
+        .navbar-nav {
+          text-align: center;
+        }
+        
+        .nav-link {
+          padding: .2rem 1rem;
+        }
+        
+        .nav-link.active,.nav-link:focus{
+          color: #fff;
+        }
+        
+        .navbar-toggler {
+          padding: 1px 5px;
+          font-size: 18px;
+          line-height: 0.3;
+        }
+        
+        .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+          color: #fff;
+        }
+      
+        .navbar-fixed-top.scrolled {
+          background-color: #fff !important;
+          transition: background-color 200ms linear;
+        }
+  
+  
+        .dropdown:hover .dropdown-menu{
+          display: block;
+      }
+      .dropdown-menu{
+          margin-top: 0;
+      }
+        /* /////////// */
+
+        .img-sty{
+            height: 950px;
+            object-fit: cover;
+            object-position: center center;
+    
+          }
+
+/* dont delete  */
+          /* .img-why{
+            height: 400px;
+            object-fit: contain;
+            object-position: center center;
+    
+          } */
+
+          
+
+          video {
+            width: 100%;
+            height: auto;
+          }
+
+          .img-col3{
+            height: 715px;
+            object-fit: cover;
+            object-position: center center;
+          }
+  
+  
+ 
+
+          /* //////////////////////// */
+
+
+          #WhSMAV{
+    
+            background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/smav_id1.jpg")  ;      
+    
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+    
+                padding: 8% 15%;
+                text-align: center;
+        
+                color:black;
+      
+      
+          
+          }
+          /* //////// */
+
+
+          #Goals{
+
+
+            background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/ourGouls.png")  ;      
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+
+            padding: 1% 15%;
+            text-align: center;
+    
+            color:black;
+          }
+
+
+          /* ///// */
+
+
+          #beneficiaries{
+
+            background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/binifts.JPG")  ;      
+    
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+    
+                padding: 1% 15%;
+                text-align: center;
+        
+                color:black;
+          }
+
+     /* ///// */
+
+
+     #whySMAV{
+    
+      padding: 1% 15%;
+      background-color: #023353;
+      position: relative;
+      text-align: center;
+      color: white;
+
+
+    
+    
+    
+    
+    
+    }
+
+ 
+    /* ///// */
+
+    #binifts{
+      
+      background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/what_for.JPG")  ;      
+    
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+          padding: 1% 15%;
+          text-align: center;
+          color:black;
+    }
+
+    /* ###### */
+
+
+    #hands{
+      padding: 4% 1%;
+
+      
+    } 
+    
+    #hands::after{
+      animation: bounce; /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 2s; /* don't forget to set a duration! */
+    }
+
+    
+    /* ////// */
+    #footer{
+    
+     
+      padding: 6% ;
+        text-align: center;
+        background-color: #cfe5f4;
+
+
+  
+    
+    
+    }
+
+    /* ///// */
+      
+
+  
+
+          .about{
+              height: 10vh;
+              min-height: 200px;
+      
+             
+          }
+          
+         .icon_about:hover{
+      
+          color: #8dd02a;
+      
+          animation: bounce; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 2s; /* don't forget to set a duration! */
+         }
+           
+         .icon{
+      
+          padding: 5%
+        }
+
+        /* ///// */
+
+
+
+  
+  
+      .icon_Why_saudi:hover{
+  
+        color: green;
+  
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+  
+        
+        
+  
+      
+       
+      }
+  
+      .icon_Why_med:hover{
+  
+        color: #f0fff0;
+  
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+  
+     
+       
+      }
+  
+  
+      .icon_Why_aca:hover{
+  
+        color: #c6f3b0;
+  
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+  
+     
+       
+      }
+  
+  
+  
+      .icon_Why_vol:hover{
+  
+        color: #49796b;
+  
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+  
+     
+      }
+      /* //////// */
+  
+  
+   
+      .fa{
+      
+      
+      margin-left:  1rem;
+      }
+      
+      .copy{
+      
+      padding: 1%;
+      }
+      
+      
+      
+      @media screen and (max-width: 768px) {
+  
+  
+      
+        #footer{
+        
+         
+          padding: 6% ;
+            text-align: center;
+            background-color: #cfe5f4;
+        
+        
+        }
+   
+  
+          .img-sty{
+            height: 700px;
+           object-fit: cover;
+            object-position: center center;
+            
+          }
+
+          /* dont delete  */
+          /* .img-why{
+
+            height: 200px;
+            object-fit: contain;
+            object-position: center center;
+          } */
+
+          
+          .img-col3{
+            height: 650px;
+            object-fit: cover;
+            object-position: center center;
+          }
+
+          video {
+            width: 100%;
+            height: auto;
+          }
+      }
+  
+
+  
+  
+      
+  
+      /* nvaBar */
+  
+     
