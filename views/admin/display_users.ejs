@@ -1,0 +1,136 @@
+<%- include('../includes/links') %>
+
+    <%- include('../includes/includes_nav/navigation_group') %>
+
+
+
+        <link rel="stylesheet" href="css/item_User.css">
+
+
+
+
+        <section id="team" class="pb-5">
+            <div class="container">
+                <h5 class="section-title h1">الافراد </h5>
+                <div class="row">
+                    <%for (var i=0; i < users.length ; i++) {%>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="image-flip">
+                                <div class="mainflip flip-0">
+
+
+                                    <div class="frontside">
+                                        <div class="card ">
+                                            <div class="card-body text-center">
+
+
+
+                                                <h4 >
+                                                    الفئة: 
+                                                    <%=users[i].firstName_Ar%>   </h4>
+                            
+                                                    <h4 > <%=users[i].middleName_Ar%>   </h4>
+                                                    <h4 > <%=users[i].lastName_Ar%>   </h4>
+                            
+                                                    <h4 > <%=users[i].email%>   </h4>
+                            
+                                                    <h4 > <%=users[i].identity_id%>   </h4>
+                                                    <h4 > <%=users[i].phone%>   </h4>
+                            
+                                                    <h4 > <%=users[i].SCFHS%>   </h4>
+                                                    <h4 > <%=users[i].nationality%>   </h4>
+                            
+                                                    <h4 > <%=users[i].EducationLevel%>   </h4>
+                                                    <h4 > <%=users[i].phone%>   </h4>
+                                                    <h4 > <%=users[i].url_video%>   </h4>
+                            
+                                                    <h4 > <%=users[i].accept%>   </h4>
+
+
+
+                                               
+
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="backside">
+                                        <div class="card">
+                                            <div class="card-body text-center mt-4">
+
+
+
+
+
+                
+                                                <form action="/accept_users" method="POST">
+                                                    <input type="hidden" name="email" value="<%=users[i].email%>">
+                                                    
+                                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                    
+                                
+                                                
+                                
+                                                    <button type="submit" class="btn"><i class="fa-2x fas fa-check" style="color:#4be702;"></i></button>
+                                                
+                                                </form>
+
+                                                <form action="/refuse_users" method="POST">
+                                                    <input type="hidden" name="email" value="<%=users[i].email%>">
+                                                    
+                                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                    
+                                
+                                            
+                                
+                                                    <button type="submit" class="btn"><i class="fa-2x fas  fa-times" style="color:#ca0404;"></i></button>
+                                                
+                                                </form>
+
+
+                                                <form action="/wait_users" method="POST">
+                                                    <input type="hidden" name="email" value="<%=users[i].email%>">
+                                                    
+                                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                    
+                                
+                                
+                                                    <button type="submit" class="btn"><i class="fa-2x fas fa-clock" style="color:#beecdf;"></i></button>
+                                                
+                                                </form>
+
+
+
+
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <%}%>
+
+        </section>
+
+
+        <section style="height: 2.5rem;"></section>
+        <%- include('../includes/footer') %>

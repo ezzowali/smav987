@@ -16,6 +16,8 @@ router.get("/sign_up_Individuals",sign_upController.getRegister)
 
 router.post("/sign_up_Individuals",sign_upController.postRegister)
 
+router.get("/login_Individuals",sign_upController.getLogin)
 
+router.post("/login_Individuals",sign_upController.postLogin)
 
 module.exports = router; 

@@ -28,6 +28,8 @@ var smav2Schema =new Schema({
   Zip:String,
   Address:String,
   SCFHS:String,
+  password:String,
+  accept:String
   
 
 });

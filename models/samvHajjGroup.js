@@ -18,7 +18,10 @@ var smav2Schema =new Schema({
   company:String ,
   jopTitle:String,
   TeamSize:String,
-  groupNumber:String
+  groupNumber:String,
+  password:String,
+  accept:String,
+  excel:String
 
 
 

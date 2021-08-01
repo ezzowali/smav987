@@ -57,7 +57,7 @@
       
       
         <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" style="color: black;"  data toggle="dropdown">Home</a>
+          <a href="/" class="nav-link" style="color: black;"  >Home</a>
         
         </div>
       
@@ -115,7 +115,7 @@
 
 
 
-  <form action="/sign_up_group" method="POST" enctype="multipart/form-data">
+  <form action="/sign_up_group" method="POST" enctype="multipart/form-data"> 
 
     <div class="frontside">
       <div class="card " >
@@ -225,6 +225,25 @@
             oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
             <span class="focus-border"></span> 
         </div>
+
+
+
+    <div class="col-md-4 mb-3"style="color:black">
+      <input type="password" class="effect-16" name="password" placeholder="password" value="" required>
+ 
+    <span class="focus-border"></span>
+  </div>
+
+
+  <div class="col-lg-12 mb-3" style="padding-top: 1em;">
+
+    <label for="desc"> الصور</label> 
+  <input type="file" name="excel" id="excel" >
+  
+  <h1 style="font-size: xx-small;"> اضف بعض الصور</h1>
+  <span class="focus-border"></span>
+  </div>
+  
 
 
         <div class="col-md-12">

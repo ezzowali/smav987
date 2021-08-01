@@ -32,9 +32,13 @@ var morgan = require('morgan')
 
 
 
+
+
 const sign_up_Individuals  = require('./routes/sign_up_Individuals');
 
-const sign_up_group=require("./routes/sign_up_group")
+const sign_up_group=require("./routes/sign_up_group");
+
+const sign_up_admin=require("./routes/sign_up_admin");
 
 const whoSMAV=require("./routes/whoSMAV");
 
@@ -42,7 +46,23 @@ const WhatWeDo=require("./routes/WhatWeDo");
 
 
 
+const members=require("./routes/members");
+ 
+const admin=require("./routes/admin");
+
+
+
+
+
+
+
+
+
 const samvHajjUsers = require('./models/samvHajjUsers');
+
+const AdminDb = require('./models/adminDb');
+
+
 
 
 
@@ -72,21 +92,6 @@ const fileStorage = multer.diskStorage({
 })
 
 
-const fileFilter = (req, file, cb) => {
-  if (
-    file.mimetype === 'image/jpg'||
-       file.mimetype === 'image/jpeg'||
-       file.mimetype === 'image/png'
-  )
-
-
-   {
-    cb(null, true);
-  }
-  else {
-    cb(null, false);
-  }
-};
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -95,7 +100,7 @@ app.use(bodyParser.urlencoded({
   extended: true}));
 
   app.use(
-    multer({ storage: fileStorage, fileFilter: fileFilter }).single('roomImage'))
+    multer({ storage: fileStorage}).single('excel'))
 
   app.use(express.static(path.join(__dirname, 'public')));
 
@@ -110,7 +115,7 @@ app.use(bodyParser.urlencoded({
   
   }));
 
-  app.use(csrfProtection);
+
   app.use(flash());
 
   const accessLogStream = fs.createWriteStream(
@@ -118,9 +123,14 @@ app.use(bodyParser.urlencoded({
     { flags: 'a' }
   );
 
-  // app.use(helmet());
+
   app.use(compression());
   app.use(morgan('combined', { stream: accessLogStream }));
+
+  app.use(csrfProtection);
+
+
+
 
 
 
@@ -137,6 +147,14 @@ app.use(bodyParser.urlencoded({
   app.use(whoSMAV);
   app.use(WhatWeDo);
   app.use(sign_up_group);
+  app.use(members);
+  app.use(admin);
+  app.use(sign_up_admin);
+
+
+
+
+
 
   
   
@@ -187,7 +205,6 @@ app.use(bodyParser.urlencoded({
 
 mongoose.connect(mongodbURI)
 .then(result => {
-
 
 
   app.listen(process.env.PORT ||3000);

@@ -9,6 +9,12 @@ const samvHajjUsers = require('../models/samvHajjUsers');
 const nodemailer=require("nodemailer")
 const sendgridTransport=require("nodemailer-sendgrid-transport")
 
+
+const bcrypt = require('bcryptjs');
+
+
+const saltRounds = 10;
+
 const transporter=nodemailer.createTransport(sendgridTransport({
   auth:{
   api_key:"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"
@@ -22,6 +28,8 @@ const transporter=nodemailer.createTransport(sendgridTransport({
 
 exports.postRegister=(req,res,next)=>{
 
+
+  bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
   const newUser=new samvHajjUsers({
     firstName_Ar:req.body.firstName_Ar,
     middleName_Ar:req.body.middleName_Ar,
@@ -42,7 +50,9 @@ exports.postRegister=(req,res,next)=>{
     SCFHS:req.body.SCFHS,
     url_video:req.body.url_video,
     Address:req.body.Address,
-    Zip:req.body.Zip
+    Zip:req.body.Zip,
+    password:hash,
+    accept:"wait"
 
 
 
@@ -111,6 +121,8 @@ exports.postRegister=(req,res,next)=>{
         
         }
       })
+    })
+
 
 
 
@@ -153,6 +165,94 @@ res.render('sign_up/sign_up_Individuals', {
 
 
 });
+}
+
+
+exports.postLogin=(req,res,next)=>{
+
+  const email=req.body.email
+  const password=req.body.password
+
+ 
+
+    
+  samvHajjUsers.findOne({email:email}).then(samvHajjUsers =>{
+
+     if(samvHajjUsers){
+
+
+      bcrypt.compare(password, samvHajjUsers.password, function(err, result) {
+        console.log("error_users");
+        if (result===true) {
+          console.log("error_users");
+      
+          console.log(req.session);
+          req.session.loggedIn=true;
+          req.session.samvHajjUsers=samvHajjUsers
+      
+          req.session.save(err => {
+          console.log(err);
+                res.redirect("/users")
+      
+                
+          });
+      
+        }
+        
+        else{
+      
+      
+          console.log("error_users");
+      
+          req.flash('error', 'Invalid email or password.');
+          return res.redirect('/');
+      
+         
+      
+        }
+      });  
+      }else {
+        console.log("error_users");
+      
+        req.flash('error', 'Invalid email or password.');
+        return res.redirect('/');
+
+      }
+
+
+  })
+
+
+  }
+
+exports.getLogin=(req,res,next)=>{
+
+
+  let message = req.flash('error');
+
+  let message2 = req.flash('success');
+  if (message.length > 0) {
+    message = message[0];
+
+  } else {
+    message = null;
+    
+  }
+
+  if (message2.length > 0) {
+    message2 = message2[0];
+
+  }
+  else {
+    message2 = null;
+  }
+  res.render('home', {
+    message: message,
+      message2: message2
+  });
+
+
+    
 }
 
 ///////////
