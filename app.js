@@ -50,6 +50,12 @@ const members=require("./routes/members");
  
 const admin=require("./routes/admin");
 
+const checkout=require("./routes/checkout");
+
+
+
+
+
 
 
 
@@ -151,8 +157,12 @@ app.use(bodyParser.urlencoded({
   app.use(admin);
   app.use(sign_up_admin);
 
+  app.use(checkout);
 
 
+
+
+  
 
 
 

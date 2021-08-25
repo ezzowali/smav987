@@ -35,7 +35,7 @@
   
 }
 
-.testbutton {
+.LoginButton {
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -64,6 +64,24 @@
 
     <div class="container">
       <a class="navbar-brand" style="color: black;" href="/"> <img src="images/logo.png" height="50x" width="80px"></a>
+      
+
+  <% if (message) { %>
+    <div class="alert alert-danger alert-dismissible fade show">
+   <p>
+     خطأ بالايميل او بكملة المرور 
+   </p>
+
+
+
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+
+    </div>
+
+
+    
+    <% } %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
       aria-expanded="false" aria-label="Toggle navigation">
@@ -97,26 +115,34 @@
            </li>
 
            
+
+           
   <li class="nav-item">
             <a class="nav-link" style="color: black;" href="/WhatWeDo">what we do ? </a>
           </li>
   
+
+          <%  if(!isAuthenticated){%>
           <div class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Sign up</a>
           <div class="dropdown-menu">
             <a href="/sign_up_Individuals" class="dropdown-item">Indivuals</a>
             <a href="/sign_up_group" class="dropdown-item">gruops</a>
-            <a href="/sign_up_admin" class="dropdown-item">admin</a>
+            <!-- <a href="/sign_up_admin" class="dropdown-item">admin</a> -->
 
               
           </div>
         </div>
 
+
+        <%  }%>
+        
+        <%  if(!isAuthenticated){%>
         <div class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Login</a>
           <div class="dropdown-menu">
-            <button class="nav-link test testbutton" style="color: black;" data-target="#login_s"  data-toggle="modal" >Gruops</button>
-            <button class="nav-link test testbutton" style="color: black;" data-target="#login_Ind" data-toggle="modal" > Indivuals</button>
+            <button class="nav-link  LoginButton" style="color: black;" data-target="#login_s"  data-toggle="modal" >Gruops</button>
+            <button class="nav-link  LoginButton" style="color: black;" data-target="#login_Ind" data-toggle="modal" > Indivuals</button>
 
             
 
@@ -124,6 +150,22 @@
           </div>
         </div>
 
+        <%  }%>
+
+
+        <%  if(isAuthenticated){%>
+          <form id="magic-form" action="/logout" method="POST">
+            <input type="hidden" name="_csrf" value=<%=csrfToken%> 
+            <input type="text">
+    
+    </form>
+    <%  }%>
+
+    <%  if(isAuthenticated){%>
+      <a class="nav-link test" style="color: black;" href="/logout" onclick="event.preventDefault();
+      document.getElementById('magic-form').submit();">تسجيل خروج</a>
+<%  }%>
+   
 
      
       
@@ -135,15 +177,13 @@
   </div>
   </nav>
 
-
   
-  
-
 
 
 
     
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+       
             <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -170,7 +210,10 @@
                     </div>
                 </div>
 
-            
+
+       
+          
+
         
          
         
@@ -215,17 +258,7 @@
         </div>
         
 
-        <% if (message) { %>
-          <div class="alert alert-danger alert-dismissible fade show">
-            <strong>!!خطأ</strong> الايميل او رقم الهوية مستخدم
-      
-      
-      
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-      
-      
-          </div>
-          <% } %>
+     
 
 <section id="WhSMAV" style="background-color: aqua;">
     <div class="container">

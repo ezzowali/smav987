@@ -4,7 +4,7 @@ const path = require('path');
 
 const express = require('express');
 
-const members = require('../controllers/members');
+const checkout = require('../controllers/checkout');
 
 const loggedin=require("../middleware/loggedin")
 
@@ -12,9 +12,9 @@ const loggedin=require("../middleware/loggedin")
 const router = express.Router();
 
 
-router.get("/groups",loggedin,members.getGroup)
+router.get("/checkout",checkout.getCheckout)
 
-router.get("/Users",loggedin,members.getUsers)
+
 
 
 

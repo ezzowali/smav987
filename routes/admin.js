@@ -65,6 +65,8 @@ router.get("/display_usersRefuse",loggedin,admin.getadminUsersRefuse)
 
 router.get("/display_usersWait",loggedin,admin.getadminUsersWait)
 
+router.post("/display_usersWait",loggedin,admin.postadminUsersWait)
+
 
 
 

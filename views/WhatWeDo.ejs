@@ -26,7 +26,14 @@
     <link rel="stylesheet" href="css/whD.css">
   
     <style>
-     
+     .LoginButton {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
       </style>
   </head>
   
@@ -41,6 +48,26 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top bg-light animated fadeinUp">
     <div class="container">
       <a class="navbar-brand" style="color: black;" href="/"> <img src="images/logo.png" height="50x" width="80px"></a>
+      
+
+  <% if (message) { %>
+    <div class="alert alert-danger alert-dismissible fade show">
+   <p>
+     خطأ بالايميل او بكملة المرور 
+   </p>
+
+
+
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+
+    </div>
+
+
+    
+    <% } %>
+
+    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -75,25 +102,52 @@
             </div>
           </div>
   
+          <%  if(!isAuthenticated){%>
+            <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Sign up</a>
+            <div class="dropdown-menu">
+              <a href="/sign_up_Individuals" class="dropdown-item">Indivuals</a>
+              <a href="/sign_up_group" class="dropdown-item">gruops</a>
+              <!-- <a href="/sign_up_admin" class="dropdown-item">admin</a> -->
+  
+                
+            </div>
+          </div>
+  
+  
+          <%  }%>
+          
+          <%  if(!isAuthenticated){%>
           <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Sign up</a>
-          <div class="dropdown-menu">
-            <a href="/sign_up_Individuals" class="dropdown-item">Indivuals</a>
-            <a href="/sign_up_group" class="dropdown-item">gruops</a>
+            <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Login</a>
+            <div class="dropdown-menu">
+              <button class="nav-link LoginButton" style="color: black;" data-target="#login_s"  data-toggle="modal" > Gruops</button>
+              <button class="nav-link LoginButton" style="color: black;" data-target="#login_Ind" data-toggle="modal" > Indivuals</button>
+  
               
+  
+                
+            </div>
           </div>
-        </div>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Login</a>
-          <div class="dropdown-menu">
-            <a class="nav-link test" style="color: black;" data-target="#login_s" data-toggle="modal" >Gruops</a>
-            <a class="nav-link test" style="color: black;" data-target="#login_Ind" data-toggle="modal" > Indivuals</a>
+  
+          <%  }%>
+  
+  
+          <%  if(isAuthenticated){%>
+            <form id="magic-form" action="/logout" method="POST">
+              <input type="hidden" name="_csrf" value=<%=csrfToken%> 
+              <input type="text">
+      
+      </form>
+      <%  }%>
+  
+      <%  if(isAuthenticated){%>
+        <a class="nav-link test" style="color: black;" href="/logout" onclick="event.preventDefault();
+        document.getElementById('magic-form').submit();">تسجيل خروج</a>
+  <%  }%>
 
-            
+  
 
-              
-          </div>
-        </div>
   </ul>
   </div>
   </div>
@@ -351,6 +405,135 @@
 
 </body>
   
+
+
+<div id="login">
+  <div class="modal fade" id="login_s" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول للشخص المسؤول عن القروب   </h5>
+
+        </div>
+        <div class="modal-body">
+          <form action="/login_group" method="POST" >
+     
+          <aside  class="col-lg-12" >
+
+
+            <div class="card">
+            <article class="card-body">
+              <h4 class="card-title text-center mb-4 mt-1">تسجيل دخول</h4>
+              <hr>
+
+              <form>
+              <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                 </div>
+                <input name="email" class="form-control" placeholder="Email or login" type="email">
+              </div> <!-- input-group.// -->
+              </div> <!-- form-group// -->
+              <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                 </div>
+                  <input name="password" class="form-control" placeholder="******" type="password">
+              </div> <!-- input-group.// -->
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <button type="submit" class="btn btn-primary btn-block"> سجل هنا  </button>
+              </div> <!-- form-group// -->
+              <p class="text-center"><a href="/Equipment_sellerReset" class="btn">أنسيت كلمة المرور؟</a></p>
+
+              <p class="text-center"><a href="/Equipment_sellerRegister" class="btn">اذا ليس لديك حساب ؟ </a></p>
+              
+
+              </form>
+
+            </article>
+            </div> <!-- card.// -->
+          </form>
+              </aside> <!-- col.// -->
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div id="login_Indvisual">
+  <div class="modal fade" id="login_Ind" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول  </h5>
+
+        </div>
+        <div class="modal-body">
+          <form action="/login_Individuals" method="POST" >
+     
+          <aside  class="col-lg-12" >
+
+
+            <div class="card">
+            <article class="card-body">
+              <h4 class="card-title text-center mb-4 mt-1">تسجيل دخول</h4>
+              <hr>
+
+              <form>
+              <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                 </div>
+                <input name="email" class="form-control" placeholder="Email or login" type="email">
+              </div> <!-- input-group.// -->
+              </div> <!-- form-group// -->
+              <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                 </div>
+                  <input name="password" class="form-control" placeholder="******" type="password">
+              </div> <!-- input-group.// -->
+              </div> <!-- form-group// -->
+              <div class="form-group">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <button type="submit" class="btn btn-primary btn-block"> سجل هنا  </button>
+              </div> <!-- form-group// -->
+              <p class="text-center"><a href="/Equipment_sellerReset" class="btn">أنسيت كلمة المرور؟</a></p>
+
+              <p class="text-center"><a href="/Equipment_sellerRegister" class="btn">اذا ليس لديك حساب ؟ </a></p>
+              
+
+              </form>
+
+            </article>
+            </div> <!-- card.// -->
+          </form>
+              </aside> <!-- col.// -->
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
   
   <script>
   

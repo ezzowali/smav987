@@ -23,6 +23,12 @@ const transporter=nodemailer.createTransport(sendgridTransport({
   }))
 
 
+
+  // sk_test_ArzaEEwX6HYa6ddheJA7dQZh1pPLrJmWJZzZNp2H
+
+  // pk_test_BczLGNno9VV7pwCiyGcjXN54se2JqfnPPAFNBtkw
+
+
 exports.getadminGroup=(req,res,next)=>{
 
   samvHajjGroup.find().select("fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(group=>{
@@ -162,7 +168,7 @@ exports.getadminUsers=(req,res,next)=>{
 
 
 
-  samvHajjUsers.find().select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  samvHajjUsers.find().select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
     res.render("admin/display_users",{
       users:users,
@@ -203,9 +209,9 @@ exports.getadminUsersRefuse=(req,res,next)=>{
 
 
 
-  samvHajjUsers.find({accept:"refuse"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  samvHajjUsers.find({accept:"refuse"}).select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
-    res.render("admin/display_users",{
+    res.render("admin/display_usersRefuse",{
       users:users,
   
 
@@ -231,7 +237,7 @@ exports.getadminUsersWait=(req,res,next)=>{
 
   samvHajjUsers.find({accept:"wait"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
-    res.render("admin/display_users",{
+    res.render("admin/display_usersWait",{
       users:users,
   
 
@@ -239,14 +245,56 @@ exports.getadminUsersWait=(req,res,next)=>{
 
 })
 
+}
+
+
+exports.postadminUsersWait=async(req,res,next)=>{
+
+  const accepting="wait"
+    var email=req.body.email
 
 
 
+    const useraccepting =await samvHajjUsers.findOne({email:email}).select("accept email").then(data=>{
 
+      console.log(data);
+      if (email==req.body.email ) {
+      samvHajjUsers.updateOne({email:data.email},{accept:accepting}).then(update=>{
+  
+    console.log(update);
+    
+    
+          }).then(result => {
+             
+       
+    
+      
+          }) .catch(err => {
+            console.log(err);
 
+          });
+         
+  
+          
 
+        }
+
+     
+        return transporter.sendMail({
+          to:email,
+          from:"dmet@dmet.edu.sa",
+          subject:"succeed",
+          html:"<h1> مبروك انقبلت </h1>"
+        })
+
+       
+            })
+  
+  
+            res.redirect("display_usersWait")
 
 }
+
 
 
 
@@ -322,7 +370,7 @@ exports.getadminUsersWait=(req,res,next)=>{
               })
     
     
-              res.redirect("display_usersWait")
+              res.redirect("display_users")
   }
 
 
@@ -382,7 +430,7 @@ exports.getadminUsersWait=(req,res,next)=>{
             })
   
   
-            res.redirect("display_usersWait")
+            res.redirect("display_users")
 }
 
 
@@ -434,7 +482,7 @@ exports.getWait=(req,res,next)=>{
           })
 
 
-          res.redirect("display_usersWait")
+          res.redirect("display_users")
 }
 
 

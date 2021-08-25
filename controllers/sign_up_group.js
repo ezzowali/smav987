@@ -173,7 +173,7 @@ exports.postLogin=(req,res,next)=>{
         else{
           console.log("wow");
           req.flash('error', 'Invalid email or password.');
-          return res.redirect('/home');
+          return res.redirect('/');
           
   
         }
@@ -200,13 +200,18 @@ exports.postLogin=(req,res,next)=>{
       else{
         console.log("wow_admin");
         req.flash('error', 'Invalid email or password.');
-        return res.redirect('/home');
+        return res.redirect('/');
         
 
       }
 }); 
 
 
+  }else{
+
+    console.log("wow_non");
+    req.flash('error', 'Invalid email or password.');
+    return res.redirect('/');
   }
   
   })
