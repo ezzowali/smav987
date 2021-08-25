@@ -157,6 +157,39 @@
     }
 
 
+    #beneficiaries{
+
+      background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/binifts.JPG")  ;      
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+
+          padding: 1% 15%;
+          text-align: center;
+  
+          color:black;
+    }
+
+
+
+
+/* ///// */
+
+#binifts{
+
+background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/what_for.JPG")  ;      
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+    padding: 1% 15%;
+    text-align: center;
+    color:black;
+}
+
+
     video {
       width: 100%;
       height: auto;
