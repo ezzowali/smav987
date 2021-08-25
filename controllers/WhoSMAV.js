@@ -5,6 +5,18 @@ const path = require('path');
 exports.getWhoSMAV=(req,res,next)=>{
 
 
+  var groups=false;
+  var users=false;
+
+  if(req.session.samvHajjUsers){
+     users=true;
+    
+  }
+
+ else if(req.session.samvHajjGroup){
+     groups=true;
+    
+  }
 
   let message = req.flash('error');
 
@@ -26,7 +38,9 @@ exports.getWhoSMAV=(req,res,next)=>{
   }
   res.render('whoSMAV',{
     message:message,
-    message2:message2
+    message2:message2,
+    groups:groups,
+    users:users
   });
   }
   

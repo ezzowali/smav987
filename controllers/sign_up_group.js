@@ -46,7 +46,8 @@ exports.postRegister=(req,res,next)=>{
     groupNumber:req.body.groupNumber,
     password:hash,
     accept:"wait",
-    excel:excel.path
+    excel:excel.path,
+    reason:"none"
     
 
   

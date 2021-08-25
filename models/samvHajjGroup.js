@@ -21,7 +21,8 @@ var smav2Schema =new Schema({
   groupNumber:String,
   password:String,
   accept:String,
-  excel:String
+  excel:String,
+  reason:String
 
 
 

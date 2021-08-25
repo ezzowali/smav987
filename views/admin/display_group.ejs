@@ -7,6 +7,20 @@
         <link rel="stylesheet" href="css/item_User.css">
 
 
+        <style>
+
+          .icon_owner{
+
+background-repeat:no-repeat;
+border: none;
+cursor:pointer;
+overflow: hidden;
+outline:none;
+color: rgb(255, 0, 0);
+background-color: Transparent;
+margin-bottom: 1rem
+}
+        </style>
 
 
         <section id="team" class="pb-5">
@@ -128,6 +142,17 @@
                                                                     الحالة : انتظار
                                                                     <%}%>
 
+                                                                    <%if(group[i].accept=="refuse"){%>
+
+                                                                        الحالة : مرفوض 
+                    
+                                                                        <br>
+                                                                     <p> 
+                                                                        <%= group[i].reason%>
+                                                                     </p>  
+
+                                                                        <%}%>
+
                                                     </h1>
                                                 </div>
 
@@ -169,6 +194,21 @@
                                                     </form>
                                                 </div>
 
+                                                <div class="col-md-2">
+
+                                              
+                                                  
+
+
+                                                       <button  class="fa-2x fas fa-times  icon_owner" id='add' onclick='ik(this.value);'  value='<%=group[i].email%>'  data-toggle="modal" data-target="#taker_Wa">
+
+
+                                                     
+        
+                                                </div>
+
+                                                
+
 
 
 
@@ -185,11 +225,86 @@
                             </div>
                         </div>
 
+                 
 
                         <%}%>
 
         </section>
+        <div id="taker">
+            <div class="modal fade" id="taker_Wa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">   تأكيد الحذف </h5>
+          
+                  </div>
+                  <div class="modal-body">
+                    <form action="/refuse_group" method="POST" >
+               
+               
 
+                    <aside  class="col-lg-12" >
+          
+          
+                      <div class="card">
+                      <article class="card-body">
+                        <h4 class="card-title text-center mb-4 mt-1"> </h4>
+                        <hr>
+          
+                        <form>
+                        <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                           </div>
+                          <input name="email" class="form-control" placeholder="Email or login" type='text' id='one' class='fld'>
+                        </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                           </div>
+
+
+                            <textarea name="reason" class="form-control" placeholder="سبب الرفض " type="text" required rows="10"></textarea>
+                        </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button type="submit" class="btn btn-primary btn-block"> ارسل هنا  </button>
+                        </div> <!-- form-group// -->
+           
+                                  
+                        
+                        </form>
+          
+                      </article>
+                      </div> <!-- card.// -->
+                    </form>
+                        </aside> <!-- col.// -->
+                  </div>
+                  <div class="modal-footer">
+          
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق </button>
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+
+
+          <script>
+
+
+
+function ik(val){
+document.getElementById('one').value = val;  
+}
+          </script>
+          
+      
 
         <section style="height: 2.5rem;"></section>
         <%- include('../includes/footer') %>

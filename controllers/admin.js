@@ -31,7 +31,7 @@ const transporter=nodemailer.createTransport(sendgridTransport({
 
 exports.getadminGroup=(req,res,next)=>{
 
-  samvHajjGroup.find().select("fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(group=>{
+  samvHajjGroup.find().select("reason fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(group=>{
 
     res.render("admin/display_group",{
       group:group,
@@ -160,7 +160,59 @@ console.log(update);
         res.redirect("display_group")
 }
 
+////////
 
+exports.getRefuseGroup=(req,res,next)=>{
+  samvHajjGroup.find().select("accept").then(data=>{
+
+  
+  res.render("admin/refuse_group")
+
+})
+
+}
+
+
+exports.postRefuseGroup= async(req,res,next)=>{
+const accepting="refuse"
+var email=req.body.email
+var reason=req.body.reason;
+
+
+
+const useraccepting =await samvHajjGroup.findOne({email:email}).select("accept email").then(data=>{
+
+  console.log(data);
+  if (email==req.body.email ) {
+    samvHajjGroup.updateOne({email:data.email},{accept:accepting,reason:reason}).then(update=>{
+
+console.log(update);
+
+
+      }).then(result => {
+         
+   
+
+  
+      }) .catch(err => {
+        console.log(err);
+
+      });
+     
+
+      
+
+    }
+
+
+   
+        })
+
+
+        res.redirect("display_group")
+}
+
+////////
 
 
 exports.getadminUsers=(req,res,next)=>{

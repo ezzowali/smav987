@@ -4,7 +4,20 @@ const path = require('path');
 
 exports.getWhatWeDo=(req,res,next)=>{
 
+  var groups=false;
+  var users=false;
 
+  if(req.session.samvHajjUsers){
+     users=true;
+    
+  }
+
+ else if(req.session.samvHajjGroup){
+     groups=true;
+    
+  }
+
+  
   let message = req.flash('error');
 
   let message2 = req.flash('success');
@@ -26,7 +39,9 @@ exports.getWhatWeDo=(req,res,next)=>{
 
   res.render('WhatWeDo',{
     message:message,
-    message2:message2
+    message2:message2,
+    groups:groups,
+    users:users
   });
   }
   

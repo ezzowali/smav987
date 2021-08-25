@@ -49,7 +49,7 @@ exports.getUsers=(req,res,next)=>{
 
     exports.getGroup=(req,res,next)=>{
 
-      samvHajjGroup.findById(req.session.samvHajjGroup._id).select("fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(dataGruop=>{
+      samvHajjGroup.findById(req.session.samvHajjGroup._id).select("reason fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(dataGruop=>{
      
        res.render('members/groups',{
         dataGruop,dataGruop
@@ -71,6 +71,48 @@ exports.getUsers=(req,res,next)=>{
          
          }
 
+
+
+
+
+         exports.postGroup=async(req,res,next)=>{
+           
+          const excel =req.file;
+          console.log(req.file);
+          console.log(req.body)
+          
+          var accept="wait"
+
+        
+        
+        
+          const useraccepting =await samvHajjGroup.findById(req.session.samvHajjGroup._id).select("accept excel").then(data=>{
+        
+            samvHajjGroup.updateOne({excel:data.excel},{excel:excel.path}).then(update=>{
+    
+    
+    
+            })
+
+            samvHajjGroup.updateOne({accept:data.accept},{accept:accept}).then(update=>{
+    
+    
+    
+            })
+
+       
+            console.log(data);
+               
+        
+                
+        
+              
+             
+                  })
+        
+        
+                  res.redirect("groups")
+        }
 
 
     

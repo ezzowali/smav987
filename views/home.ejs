@@ -99,6 +99,27 @@
 
 
 
+    <%  if(isAuthenticated){%>
+
+      <% if(users){%>
+
+        <li class="nav-item">
+          <a href="/users" class="nav-link " style="color: rgb(15, 101, 230);" data toggle="dropdown">صفحتي </a>
+        </li>
+
+        <% } %>
+
+        <% if(groups){%>
+
+          <li class="nav-item">
+            <a href="/groups" class="nav-link" style="color: rgb(15, 101, 230);" data toggle="dropdown">صفحتي </a>
+          </li>
+  
+          <% } %>
+
+<%  }%>
+
+
     <div class="nav-item dropdown">
       <a href="#" class="nav-link dropdown-toggle" style="color: rgb(15, 101, 230);" data toggle="dropdown">Home</a>
       <div class="dropdown-menu">
@@ -159,6 +180,8 @@
     
     </form>
     <%  }%>
+
+
 
     <%  if(isAuthenticated){%>
       <a class="nav-link test" style="color: black;" href="/logout" onclick="event.preventDefault();

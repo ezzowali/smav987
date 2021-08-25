@@ -14,6 +14,14 @@ const router = express.Router();
 
 router.get("/groups",loggedin,members.getGroup)
 
+
+
+router.post("/groups",loggedin,members.postGroup)
+
+
+
+
+
 router.get("/Users",loggedin,members.getUsers)
 
 

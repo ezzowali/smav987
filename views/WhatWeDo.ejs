@@ -81,6 +81,25 @@
   
   
  
+    <%  if(isAuthenticated){%>
+
+      <% if(users){%>
+
+        <li class="nav-item">
+          <a href="/users" class="nav-link " style="color: rgb(15, 101, 230);" data toggle="dropdown">صفحتي </a>
+        </li>
+
+        <% } %>
+
+        <% if(groups){%>
+
+          <li class="nav-item">
+            <a href="/groups" class="nav-link" style="color: rgb(15, 101, 230);" data toggle="dropdown">صفحتي </a>
+          </li>
+  
+          <% } %>
+
+<%  }%>
 
 
     <li class="nav-item">
@@ -94,9 +113,9 @@
            <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" style="color: rgb(15, 101, 230);" data toggle="dropdown">what we do ?</a>
             <div class="dropdown-menu">
-              <a href="#WhSMAV" class="dropdown-item">What is SMAV?</a>
-                <a href="#about" class="dropdown-item">About</a>
-                <a href="#whySMAV" class="dropdown-item">Why SMAV ?</a>
+              <a href="#proramm_SMAV" class="dropdown-item">برامجنا </a>
+                <a href="#paths" class="dropdown-item">مسارات</a>
+                
                 <a href="#footer" class="dropdown-item">Contact </a>
                 
             </div>

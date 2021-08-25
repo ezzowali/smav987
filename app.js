@@ -66,6 +66,9 @@ const checkout=require("./routes/checkout");
 
 const samvHajjUsers = require('./models/samvHajjUsers');
 
+const samvHajjGroup = require('./models/samvHajjGroup');
+
+
 const AdminDb = require('./models/adminDb');
 
 
@@ -186,6 +189,18 @@ app.use(bodyParser.urlencoded({
   });
   app.get("/",function(req,res){
 
+    var groups=false;
+    var users=false;
+
+    if(req.session.samvHajjUsers){
+       users=true;
+      
+    }
+
+   else if(req.session.samvHajjGroup){
+       groups=true;
+      
+    }
     let message = req.flash('error');
 
     let message2 = req.flash('success');
@@ -206,7 +221,9 @@ app.use(bodyParser.urlencoded({
     }
     res.render('home', {
       message: message,
-        message2: message2
+        message2: message2,
+        groups:groups,
+        users:users
     });
 })
 

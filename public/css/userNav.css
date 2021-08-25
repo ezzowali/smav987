@@ -1,11 +1,8 @@
+
 body{
-    background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/binifts.JPG")  ;      
+  background-color: #cfe5f4;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-
 .carousel-item {
     height: 100vh;
     min-height: 300px;
@@ -92,8 +89,38 @@ body{
 
 #beneficiaries{
 
+  background-image:linear-gradient( rgba(6, 173, 240, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/binifts.JPG")  ;      
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
         padding: 1% 15%;
         text-align: center;
 
         color:black;
+  }
+
+
+
+  #footer{
+    
+     
+    padding: 6% ;
+      text-align: center;
+      background-color: #cfe5f4;
+
+
+
+  
+  
+  }
+  .fa{
+  
+  
+  margin-left:  1rem;
+  }
+  
+  .copy{
+  
+  padding: 1%;
   }

@@ -47,6 +47,16 @@ router.post("/wait_group",loggedin,admin.postWaitGroup)
 
 
 
+router.get("/refuse_group",loggedin,admin.getRefuseGroup)
+
+router.post("/refuse_group",loggedin,admin.postRefuseGroup)
+
+
+
+
+
+
+
 
 
 
