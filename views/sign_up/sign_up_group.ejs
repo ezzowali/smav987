@@ -182,20 +182,20 @@
 
             <div class="col-md-4 mb-3">
                 <input type="text" class="effect-16" name="company" placeholder="اسم الجهة " value="" 
-                required   oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
+                required  >
                 <span class="focus-border"></span>  
             </div>
 
             <div class="col-md-4 mb-3" style="color: black;">
                 <input type="email" class="effect-16" name="email" value="" placeholder="البريد الالكتروني "
-                 required   oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
+                 required >
                 <span class="focus-border"></span>
                 </div>
 
                 <div class="col-md-4 mb-3" style="color: black;" >
       
                     <input type="number"  class="effect-16" min="500000000" name="phone" placeholder="رقم التواصل " value=""
-                     required   oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
+                     required>
                     <span class="focus-border"></span>  
                 </div>
             
@@ -203,8 +203,7 @@
          
 
           <div class="col-md-4 mb-3">
-            <select name="TeamSize" class="effect-16 " required 
-            oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
+            <select name="TeamSize" class="effect-16 " required>
               <option value=""> حجم الفريق </option>
     <option value="small">3-11</option>
 <option value="meduim ">12-30</option>
@@ -219,8 +218,7 @@
           <div class="col-md-4 mb-3">
 
             <input type="number" class="effect-16" name="groupNumber" min="3" placeholder="عدد الفريق " value="" 
-            required 
-            oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
+            required >
             <span class="focus-border"></span> 
         </div>
 
@@ -232,30 +230,40 @@
     <span class="focus-border"></span>
   </div>
 
-
-  <div class="col-lg-12 mb-3" style="padding-top: 1em;">
-
-
-  <input type="file" name="excel" id="excel" >
+  <label for="exampleFormControlFile1">Excel اضف بيانات المشاركين بصيغة  </label>  
+  <div class="col-md-12 mb-3" style="padding-top: 1em;">
+<input type="file" name="excel" class="form-control-file" id="excel"> 
   
-  <h1 style="font-size: xx-small;"> excel اضف ملف بصيغة </h1>
   <span class="focus-border"></span>
   </div>
   
 
+  
 
         <div class="col-md-12">
-                      
+
+          
+
+         
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <button type="submit" class="btn btn-info">تسجيل</button>
-          </div>
+
+        </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
         </form>
   
 
                   </div> 
                 </div> 
 
-                </div>
+         
 
                 
            
