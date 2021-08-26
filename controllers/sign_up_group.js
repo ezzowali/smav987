@@ -311,7 +311,8 @@ randomBytes(16, function(err, buffer)  {
       .then(result => {
         req.flash('success', 'it success ! conguraltion!!');
         res.redirect("/groupReset")
-       
+
+        process.env.HOST="smav-hajj.smavacadmey.com";
 
 
         transporter.sendMail({
@@ -321,7 +322,9 @@ randomBytes(16, function(err, buffer)  {
           subject: 'اعادة كلمة المرور',
           html: `
             <p>You requested a password reset</p>
-            <p>Click this <a href="https://smav-hajj.smavacadmey||"localhost:3000"}/group_new_password/${token}">link</a> to set a new password.</p>
+           
+            <p>Click this <a href="http://${process.env.HOST ||"localhost:3000"}/group_new_password/${token}">link</a> to set a new password.</p>
+
           `
         });
 
