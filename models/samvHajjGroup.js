@@ -22,7 +22,8 @@ var smav2Schema =new Schema({
   password:String,
   accept:String,
   excel:String,
-  reason:String
+  reason:String,
+  resetToken:String
 
 
 

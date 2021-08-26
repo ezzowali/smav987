@@ -5,6 +5,7 @@ const path = require('path');
 
 const samvHajjGroup = require('../models/samvHajjGroup');
 
+var randomBytes = require('randombytes');
 const nodemailer=require("nodemailer")
 const sendgridTransport=require("nodemailer-sendgrid-transport")
 
@@ -251,6 +252,154 @@ exports.getLogin=(req,res,next)=>{
 
     
 }
+
+
+///////
+
+
+exports.getResetGroup = (req, res, next) => {
+
+  let message = req.flash('error');
+  if (message.length > 0) {
+    message = message[0];
+  } else {
+    message = null;
+  }
+
+
+
+  let message2 = req.flash('success');
+  if (message2.length > 0) {
+    message2 = message2[0];
+  } else {
+    message2 = null;
+  }
+
+
+
+  res.render('sign_up/groupReset',{
+    message:message,
+    message2:message2
+
+
+  })
+};
+
+exports.postResetGroup=(req,res,next)=>{
+
+
+randomBytes(16, function(err, buffer)  {
+    if (err) {
+      console.log(err);
+      return res.redirect('/groupReset');
+    }
+    const token = buffer.toString('hex');
+    samvHajjGroup.findOne({ email: req.body.email })
+      .then(smav => {
+        if (!smav) {
+          
+          
+          req.flash('error', 'No account with that email found.');
+          return res.redirect('/groupReset');
+        }
+      
+        
+        smav.resetToken = token;
+        
+        return smav.save();
+      })
+      .then(result => {
+        req.flash('success', 'it success ! conguraltion!!');
+        res.redirect("/groupReset")
+       
+
+
+        transporter.sendMail({
+
+          to: req.body.email,
+          from: 'dmet@dmet.edu.sa',
+          subject: 'اعادة كلمة المرور',
+          html: `
+            <p>You requested a password reset</p>
+            <p>Click this <a href="http://${process.env.PORT ||"localhost:3000"}/group_new_password/${token}">link</a> to set a new password.</p>
+          `
+        });
+
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+  });
+
+
+
+
+
+
+
+
+
+}
+
+exports.getNewPasswordGroup = (req, res, next) => {
+  const token = req.params.token;
+  let message2 = req.flash('success');
+  if (message2.length > 0) {
+    message2 = message2[0];
+  } else {
+    message2 = null;
+  }
+  samvHajjGroup.findOne({ resetToken: token })
+    .then(smav => {
+  
+
+      console.log(smav);
+      
+      res.render('sign_up/group_new_password', {
+      
+    
+        smavId: smav._id.toString(),
+        passwordToken: token,
+        message2:message2
+      
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
+
+exports.postNewPasswordGroup = (req, res, next) => {
+  const newPassword = req.body.password;
+  const smavId = req.body.smavId;
+  const passwordToken = req.body.passwordToken;
+  let resetUser;
+
+  samvHajjGroup.findOne({
+    resetToken: passwordToken,
+    _id: smavId
+  })
+    .then(smav => {
+      resetUser = smav;
+      return bcrypt.hash(newPassword, 12);
+    })
+    .then(hashedPassword => {
+      resetUser.password = hashedPassword;
+      resetUser.resetToken = undefined;
+      resetUser.resetTokenExpiration = undefined;
+      return resetUser.save();
+    })
+    .then(result => {
+console.log(result);
+   
+      res.redirect('/');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
+
 
 
 ///////////

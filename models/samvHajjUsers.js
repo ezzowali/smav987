@@ -29,7 +29,8 @@ var smav2Schema =new Schema({
   Address:String,
   SCFHS:String,
   password:String,
-  accept:String
+  accept:String,
+  resetToken:String
   
 
 });

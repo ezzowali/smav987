@@ -82,6 +82,27 @@
 
     
     <% } %>
+
+    <% if (message2) { %>
+      <div class="alert alert-success alert-dismissible fade show">
+     <p>
+
+      تم تغيير كلمة المرور بنجاح 
+      <a href="/">للعودة الى الصفحة الرئيسية اضغط هنا </a>
+    </p>
+  
+  
+  
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+  
+      </div>
+  
+  
+      
+      <% } %>
+
+    
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
       aria-expanded="false" aria-label="Toggle navigation">
@@ -404,9 +425,9 @@
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
               <button type="submit" class="btn btn-primary btn-block"> سجل هنا  </button>
               </div> <!-- form-group// -->
-              <p class="text-center"><a href="/Equipment_sellerReset" class="btn">أنسيت كلمة المرور؟</a></p>
+              <p class="text-center"><a href="/groupReset" class="btn">أنسيت كلمة المرور؟</a></p>
 
-              <p class="text-center"><a href="/Equipment_sellerRegister" class="btn">اذا ليس لديك حساب ؟ </a></p>
+              <p class="text-center"><a href="/sign_up_group" class="btn">اذا ليس لديك حساب ؟ </a></p>
               
 
               </form>
@@ -468,9 +489,9 @@
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
               <button type="submit" class="btn btn-primary btn-block"> سجل هنا  </button>
               </div> <!-- form-group// -->
-              <p class="text-center"><a href="/Equipment_sellerReset" class="btn">أنسيت كلمة المرور؟</a></p>
+              <p class="text-center"><a href="/IndividualsReset" class="btn">أنسيت كلمة المرور؟</a></p>
 
-              <p class="text-center"><a href="/Equipment_sellerRegister" class="btn">اذا ليس لديك حساب ؟ </a></p>
+              <p class="text-center"><a href="/sign_up_Individuals" class="btn">اذا ليس لديك حساب ؟ </a></p>
               
 
               </form>
