@@ -321,7 +321,7 @@ randomBytes(16, function(err, buffer)  {
           subject: 'اعادة كلمة المرور',
           html: `
             <p>You requested a password reset</p>
-            <p>Click this <a href="http://${process.env.PORT ||"localhost:3000"}/group_new_password/${token}">link</a> to set a new password.</p>
+            <p>Click this <a href="https://smav-hajj.smavacadmey||"localhost:3000"}/group_new_password/${token}">link</a> to set a new password.</p>
           `
         });
 
