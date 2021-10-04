@@ -46,7 +46,6 @@ const WhatWeDo=require("./routes/WhatWeDo");
 
 
 
-const members=require("./routes/members");
  
 const admin=require("./routes/admin");
 
@@ -66,7 +65,12 @@ const admin=require("./routes/admin");
 
 const samvHajjUsers = require('./models/samvHajjUsers');
 
+const Users = require('./models/Users');
+
+
+
 const samvHajjGroup = require('./models/samvHajjGroup');
+
 
 
 const AdminDb = require('./models/adminDb');
@@ -156,23 +160,11 @@ app.use(bodyParser.urlencoded({
   app.use(whoSMAV);
   app.use(WhatWeDo);
   app.use(sign_up_group);
-  app.use(members);
+
   app.use(admin);
   app.use(sign_up_admin);
 
 
-
-
-
-
-  
-
-
-
-  
-  
-  
- 
 
 
   app.use((req, res, next) => {
@@ -230,7 +222,12 @@ app.use(bodyParser.urlencoded({
 
 
 
-mongoose.connect(mongodbURI)
+mongoose.connect(mongodbURI,{
+  useNewUrlParser: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+      useCreateIndex: true 
+})
 .then(result => {
 
 
@@ -238,3 +235,7 @@ mongoose.connect(mongodbURI)
     })
     .catch(err => {
     });
+
+
+
+  

@@ -6,7 +6,7 @@ const xlsx = require("xlsx")//npm install xlsx
 
 
 const samvHajjGroup = require('../models/samvHajjGroup');
-const samvHajjUsers = require('../models/samvHajjUsers');
+const Users = require('../models/Users');
 
 
 const nodemailer=require("nodemailer")
@@ -15,7 +15,7 @@ const sendgridTransport=require("nodemailer-sendgrid-transport");
 
 const transporter=nodemailer.createTransport(sendgridTransport({
   auth:{
-    api_key:"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"
+    api_key:"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"
   
   
   }
@@ -24,9 +24,6 @@ const transporter=nodemailer.createTransport(sendgridTransport({
 
 
 
-  // sk_test_ArzaEEwX6HYa6ddheJA7dQZh1pPLrJmWJZzZNp2H
-
-  // pk_test_BczLGNno9VV7pwCiyGcjXN54se2JqfnPPAFNBtkw
 
 
 exports.getadminGroup=(req,res,next)=>{
@@ -96,7 +93,7 @@ exports.getadminGroupAccept=(req,res,next)=>{
    
       return transporter.sendMail({
         to:email,
-        from:"dmet@dmet.edu.sa",
+        from:"smav@dmet.edu.sa",
         subject:"succeed",
         html:"<h1> مبروك انقبلت </h1>"
       })
@@ -220,7 +217,7 @@ exports.getadminUsers=(req,res,next)=>{
 
 
 
-  samvHajjUsers.find().select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  Users.find().select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
     res.render("admin/display_users",{
       users:users,
@@ -237,7 +234,7 @@ exports.getadminUsersAccept=(req,res,next)=>{
 
 
 
-  samvHajjUsers.find({accept:"accept"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  Users.find({accept:"accept"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
     res.render("admin/display_usersAccept",{
       users:users,
@@ -261,7 +258,7 @@ exports.getadminUsersRefuse=(req,res,next)=>{
 
 
 
-  samvHajjUsers.find({accept:"refuse"}).select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  Users.find({accept:"refuse"}).select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
     res.render("admin/display_usersRefuse",{
       users:users,
@@ -287,7 +284,7 @@ exports.getadminUsersWait=(req,res,next)=>{
 
 
 
-  samvHajjUsers.find({accept:"wait"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  Users.find({accept:"wait"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
     res.render("admin/display_usersWait",{
       users:users,
@@ -307,11 +304,11 @@ exports.postadminUsersWait=async(req,res,next)=>{
 
 
 
-    const useraccepting =await samvHajjUsers.findOne({email:email}).select("accept email").then(data=>{
+    const useraccepting =await Users.findOne({email:email}).select("accept email").then(data=>{
 
       console.log(data);
       if (email==req.body.email ) {
-      samvHajjUsers.updateOne({email:data.email},{accept:accepting}).then(update=>{
+        Users.updateOne({email:data.email},{accept:accepting}).then(update=>{
   
     console.log(update);
     
@@ -334,7 +331,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
      
         return transporter.sendMail({
           to:email,
-          from:"dmet@dmet.edu.sa",
+          from:"smav@dmet.edu.sa",
           subject:"succeed",
           html:"<h1> مبروك انقبلت </h1>"
         })
@@ -357,7 +354,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
 
 
      exports.getRefuse=(req,res,next)=>{
-      samvHajjUsers.find().select("accept").then(data=>{
+      Users.find().select("accept").then(data=>{
 
     
         res.render("admin/refuse_users")
@@ -373,7 +370,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
 
 
   
-      var userEditing = await samvHajjUsers.findOne({email:email}).select("accept email").then(data=>{
+      var userEditing = await Users.findOne({email:email}).select("accept email").then(data=>{
     
 
         console.log(userEditing);
@@ -381,7 +378,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
         if (data.email==req.body.email ) {
       
           console.log(data);
-       samvHajjUsers.updateOne({email:data.email},{accept:accepting}).then(update=>{
+          Users.updateOne({email:data.email},{accept:accepting}).then(update=>{
     
             console.log(update);
         
@@ -402,7 +399,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
 
                   return transporter.sendMail({
                     to:email,
-                    from:"dmet@dmet.edu.sa",
+                    from:"smav@dmet.edu.sa",
                     subject:"succeed",
                     html:"<h1> م انقبلت  </h1>"
                   })
@@ -430,7 +427,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
 
 
   exports.getAccept=(req,res,next)=>{
-    samvHajjUsers.find().select("accept").then(data=>{
+    Users.find().select("accept").then(data=>{
 
   
       res.render("admin/accept_users")
@@ -446,11 +443,11 @@ exports.postadminUsersWait=async(req,res,next)=>{
 
 
 
-    const useraccepting =await samvHajjUsers.findOne({email:email}).select("accept email").then(data=>{
+    const useraccepting =await Users.findOne({email:email}).select("accept email").then(data=>{
 
       console.log(data);
       if (email==req.body.email ) {
-      samvHajjUsers.updateOne({email:data.email},{accept:accepting}).then(update=>{
+        Users.updateOne({email:data.email},{accept:accepting}).then(update=>{
   
     console.log(update);
     
@@ -473,7 +470,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
      
         return transporter.sendMail({
           to:email,
-          from:"dmet@dmet.edu.sa",
+          from:"smav@dmet.edu.sa",
           subject:"succeed",
           html:"<h1> مبروك انقبلت </h1>"
         })
@@ -489,7 +486,7 @@ exports.postadminUsersWait=async(req,res,next)=>{
 
 
 exports.getWait=(req,res,next)=>{
-  samvHajjUsers.find().select("accept").then(data=>{
+  Users.find().select("accept").then(data=>{
 
 
     res.render("admin/wait_users")
@@ -505,11 +502,11 @@ exports.getWait=(req,res,next)=>{
 
 
 
-  const useraccepting =await samvHajjUsers.findOne({email:email}).select("accept email").then(data=>{
+  const useraccepting =await Users.findOne({email:email}).select("accept email").then(data=>{
 
     console.log(data);
     if (email==req.body.email ) {
-    samvHajjUsers.updateOne({email:data.email},{accept:accepting}).then(update=>{
+      Users.updateOne({email:data.email},{accept:accepting}).then(update=>{
 
   console.log(update);
   
@@ -541,7 +538,11 @@ exports.getWait=(req,res,next)=>{
 exports.getAcceptExcel=(req,res,next)=>{
 
 
-  samvHajjUsers.find({accept:"accept"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept").then(data=>{
+
+
+
+
+  Users.find({accept:"accept"}).select("times Specialty university city accept firstName_En  middleName_En lastName_En email age gender  SCFHS  EducationLevel  phone  ").then(data=>{
 
 
     res.send(JSON.stringify(data))

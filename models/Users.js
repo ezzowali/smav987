@@ -21,8 +21,7 @@ var smav2Schema =new Schema({
   Specialty:Array,
   SCFHS:String,
   times:String,
-  accept:String,
-  identity_id:Number
+  accept:String
 
  
   
@@ -33,4 +32,4 @@ var smav2Schema =new Schema({
 
 
 
-module.exports = mongoose.model('samvHajjUsers', smav2Schema);
+module.exports = mongoose.model('Users', smav2Schema);

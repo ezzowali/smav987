@@ -20,7 +20,7 @@ var smav2Schema =new Schema({
   TeamSize:String,
   groupNumber:String,
   password:String,
-  accept:String,
+
   excel:String,
   reason:String,
   resetToken:String

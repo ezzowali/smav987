@@ -66,41 +66,9 @@
       <a class="navbar-brand" style="color: black;" href="/"> <img src="images/logo.png" height="50x" width="80px"></a>
       
 
-  <% if (message) { %>
-    <div class="alert alert-danger alert-dismissible fade show">
-   <p>
-     خطأ بالايميل او بكملة المرور 
-   </p>
 
 
 
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-
-
-    </div>
-
-
-    
-    <% } %>
-
-    <% if (message2) { %>
-      <div class="alert alert-success alert-dismissible fade show">
-     <p>
-
-      تم تغيير كلمة المرور بنجاح 
-      <a href="/">للعودة الى الصفحة الرئيسية اضغط هنا </a>
-    </p>
-  
-  
-  
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-  
-  
-      </div>
-  
-  
-      
-      <% } %>
 
     
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -120,25 +88,6 @@
 
 
 
-    <%  if(isAuthenticated){%>
-
-      <% if(users){%>
-
-        <li class="nav-item">
-          <a href="/users" class="nav-link " style="color: rgb(15, 101, 230);" data toggle="dropdown">صفحتي </a>
-        </li>
-
-        <% } %>
-
-        <% if(groups){%>
-
-          <li class="nav-item">
-            <a href="/groups" class="nav-link" style="color: rgb(15, 101, 230);" data toggle="dropdown">صفحتي </a>
-          </li>
-  
-          <% } %>
-
-<%  }%>
 
 
     <div class="nav-item dropdown">
@@ -163,7 +112,7 @@
           </li>
   
 
-          <%  if(!isAuthenticated){%>
+ 
           <div class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Sign up</a>
           <div class="dropdown-menu">
@@ -174,41 +123,6 @@
               
           </div>
         </div>
-
-
-        <%  }%>
-        
-        <%  if(!isAuthenticated){%>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Login</a>
-          <div class="dropdown-menu">
-            <button class="nav-link  LoginButton" style="color: black;" data-target="#login_s"  data-toggle="modal" >Gruops</button>
-            <button class="nav-link  LoginButton" style="color: black;" data-target="#login_Ind" data-toggle="modal" > Indivuals</button>
-
-            
-
-              
-          </div>
-        </div>
-
-        <%  }%>
-
-
-        <%  if(isAuthenticated){%>
-          <form id="magic-form" action="/logout" method="POST">
-            <input type="hidden" name="_csrf" value=<%=csrfToken%> 
-            <input type="text">
-    
-    </form>
-    <%  }%>
-
-
-
-    <%  if(isAuthenticated){%>
-      <a class="nav-link test" style="color: black;" href="/logout" onclick="event.preventDefault();
-      document.getElementById('magic-form').submit();">تسجيل خروج</a>
-<%  }%>
-   
 
      
       
@@ -245,11 +159,13 @@
 
                     <img class="img-col3 img-fluid rss opacity" src="images/postera1.jpg" alt="Third slide">
 
-                    <div class="centered ">
-                        العطاء ... أسمى معاني الإنسانية 
+                    <div class="centered " >
+                       العطاء ... أسمى معاني الإنسانية 
 إنه الصفة المتجذرة في أصل الإنسانية ... فطرة الله التي فطر الناس عليها.. إنه الكنز الذي تحمله كل نفس بشرية في أعماقها . وإن كل خير مهما صغر مرتبط بأصالة هذا الدين وإنسانيته وقيمه ، فكيف  هو عندما يرتبط بشرف عظيم  ويحمل رسالة إنسانية للعالم
 من عمق هذا المفهوم وتجذره ومن خير بقاع الأرض و من منبع الخير في النفس الإنسانية ولدت  الأكاديمية السعودية للتطوع الصحي (SMAV )
 ولدت كمبادرة وطنية من قلب مملكة الإنسانية لتكون نموذجاً متميزاً في استخراج الكنوز من أعماق شباب الوطن وتتبنى دورها في بنائهم ، وتضعهم في خدمة مجتمعهم ووطنهم العزيز  وفي شرف الخدمة الصحية التطوعية لضيوفه حجاجاً ومعتمرين 
+
+
                     </div>
                 </div>
 
@@ -383,134 +299,6 @@
 
 </body>
 
-
-
-<div id="login">
-  <div class="modal fade" id="login_s" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">مجموعات    </h5>
-
-        </div>
-        <div class="modal-body">
-          <form action="/login_group" method="POST" >
-     
-          <aside  class="col-lg-12" >
-
-
-            <div class="card">
-            <article class="card-body">
-              <h4 class="card-title text-center mb-4 mt-1">تسجيل دخول</h4>
-              <hr>
-
-              <form>
-              <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                 </div>
-                <input name="email" class="form-control" placeholder="Email or login" type="email">
-              </div> <!-- input-group.// -->
-              </div> <!-- form-group// -->
-              <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                 </div>
-                  <input name="password" class="form-control" placeholder="******" type="password">
-              </div> <!-- input-group.// -->
-              </div> <!-- form-group// -->
-              <div class="form-group">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-              <button type="submit" class="btn btn-primary btn-block"> سجل هنا  </button>
-              </div> <!-- form-group// -->
-              <p class="text-center"><a href="/groupReset" class="btn">أنسيت كلمة المرور؟</a></p>
-
-              <p class="text-center"><a href="/sign_up_group" class="btn">اذا ليس لديك حساب ؟ </a></p>
-              
-
-              </form>
-
-            </article>
-            </div> <!-- card.// -->
-          </form>
-              </aside> <!-- col.// -->
-        </div>
-        <div class="modal-footer">
-
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق </button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-<div id="login_Indvisual">
-  <div class="modal fade" id="login_Ind" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"> افراد  </h5>
-
-        </div>
-        <div class="modal-body">
-          <form action="/login_Individuals" method="POST" >
-     
-          <aside  class="col-lg-12" >
-
-
-            <div class="card">
-            <article class="card-body">
-              <h4 class="card-title text-center mb-4 mt-1">تسجيل دخول</h4>
-              <hr>
-
-              <form>
-              <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                 </div>
-                <input name="email" class="form-control" placeholder="Email or login" type="email">
-              </div> <!-- input-group.// -->
-              </div> <!-- form-group// -->
-              <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                 </div>
-                  <input name="password" class="form-control" placeholder="******" type="password">
-              </div> <!-- input-group.// -->
-              </div> <!-- form-group// -->
-              <div class="form-group">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-              <button type="submit" class="btn btn-primary btn-block"> سجل هنا  </button>
-              </div> <!-- form-group// -->
-              <p class="text-center"><a href="/IndividualsReset" class="btn">أنسيت كلمة المرور؟</a></p>
-
-              <p class="text-center"><a href="/sign_up_Individuals" class="btn">اذا ليس لديك حساب ؟ </a></p>
-              
-
-              </form>
-
-            </article>
-            </div> <!-- card.// -->
-          </form>
-              </aside> <!-- col.// -->
-        </div>
-        <div class="modal-footer">
-
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق </button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
 
   
   

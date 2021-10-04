@@ -3,8 +3,6 @@
     <meta charset="utf-8">
     <title>Register_SMAV</title>
   
-    <link rel = "icon" class="animated fadeinUp" href = "images/logo.png" type = "images/x-icon">
-
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -74,7 +72,7 @@
               <a href="#" class="nav-link dropdown-toggle" style="color: rgb(15, 101, 230);" data toggle="dropdown">Sign up</a>
               <div class="dropdown-menu">
                 <a href="/sign_up_Individuals" class="dropdown-item">Indivuals</a>
-                <a href="/sign_up_group" class="dropdown-item">gruops</a>
+                <a href="/sign_up_group" style="color: rgb(15, 101, 230);" class="dropdown-item">gruops</a>
                   
               </div>
             </div>
@@ -84,13 +82,11 @@
       </div>
       </nav>
     
-    <div class="container mt-5">
+
+      <section style="height: 5rem;"></section>
+
+      <div class="container ">
     
-
-      
-
-
-           
     <div class="card-body content" style="color: white;  text-align:left; ">
       <h1 style="text-align: center;"> <img src="images/logo.png" height="70x" width="100px"></h1>
    
@@ -117,104 +113,60 @@
 
 
 
-  <form action="/sign_up_admin" method="POST" enctype="multipart/form-data">
-
-    <div class="frontside">
-      <div class="card " >
-          <div class="card-body text-center">
-            <h4 class="card-title fas fa-user-circle" style="color: black;"> <i class=" "></i>  المعلومات الشخصية لمسؤول الجهة </h4>
-
-   
-      <div class="row">
-
-        
-        <div class="col-md-4 mb-3">
-
-          <input type="text" class=" effect-16" name="name" placeholder="  الاسم الثلاثي " required 
-          oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
-          <span class="focus-border"></span>
-
-         
-        </div>
+    <form action="/login_admin" method="POST" >
+       
+        <aside  class="col-lg-12" >
 
 
-        <div class="col-md-4 mb-3" style="color: black;">
-            <input type="email" class="effect-16" name="email" value="" placeholder="البريد الالكتروني "
-             required   oninvalid="this.setCustomValidity('الرجاء تعبئة هذا الحقل ');" onchange="try{setCustomValidity('')}catch(e){};" x-moz-errormessage="الرجاء تعبئة هذا الحقل">
-            <span class="focus-border"></span>
-            </div>
+          <div class="card">
+          <article class="card-body">
+            <h4 class="card-title text-center mb-4 mt-1">تسجيل دخول</h4>
+            <hr>
 
+            <form>
+            <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+               </div>
+              <input name="email" class="form-control" placeholder="Email or login" type="email">
+            </div> <!-- input-group.// -->
+            </div> <!-- form-group// -->
+            <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+               </div>
+                <input name="password" class="form-control" placeholder="******" type="password">
+            </div> <!-- input-group.// -->
+            </div> <!-- form-group// -->
+            <div class="form-group">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit" class="btn btn-primary btn-block"> سجل هنا  </button>
+            </div> <!-- form-group// -->
+            <p class="text-center"><a href="/groupReset" class="btn">أنسيت كلمة المرور؟</a></p>
 
+            <p class="text-center"><a href="/sign_up_group" class="btn">اذا ليس لديك حساب ؟ </a></p>
+            
 
-            <div class="col-md-4 mb-3"style="color:black">
-                <input type="password" class="effect-16" name="password" placeholder="password" value="" required>
-           
-              <span class="focus-border"></span>
-            </div>
-    
+            </form>
 
-
-
-          </div>
-        </div>
-      </div>
-
-
-
-      </div>
-
-
-
-
-
-   
-
-
-        <div class="col-md-12">
-                      
-            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <button type="submit" class="btn btn-info">تسجيل</button>
-          </div>
+          </article>
+          </div> <!-- card.// -->
         </form>
   
 
-                  </div>
-                </div>
+                  </div> 
+                </div> 
+
+         
 
                 
            
       
-              </div>
-
-              
-        
-            </div>
-        
-        
-              </div>
-
-    
-          
-    
-
-        
-    
-    
-    
-    
-    
-      </div>
-    </div>
-  
-  
-    <script>
+            
   
 
-  
-
-
-
-    </script>
   
   </body>
   
@@ -222,3 +174,5 @@
   
   
   
+
+
