@@ -93,170 +93,135 @@ exports.postRegister=(req,res,next)=>{
             from:"Smav@dmet.edu.sa",
             subject:"succeed",
             html:`
-           
-        <td class="esd-structure es-p20t es-p20b es-p20r es-p20l" align="left">
-        <table width="100%" cellspacing="0" cellpadding="0">
-            <tbody>
-                <tr>
-                    <td class="esd-container-frame" width="960" valign="top" align="center">
-                        <table width="100%" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr>
-                                    <td class="esd-block-image" align="center" style="font-size:0"><a href="https://www.smavacadmey.com" target="_blank"><img src="https://i.imgur.com/WuxuLUZ.png" alt style="display: block;" width="562"></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </td>
-<!-- //// -->
-    <td class="esd-stripe" esd-custom-block-id="19035" align="center">
-        <table class="es-content-body" style="background-color: #333333;" width="600" cellspacing="0" cellpadding="0" bgcolor="#333333" align="center">
-            <tbody>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
+            
+            <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/main.css">
+        
+        
+        
+        
+            
+        <style>
+          
+          .rss.opacity { filter: opacity(40%);  }
+        
+          .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        
+          
+        }
+        
+        .LoginButton {
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+        }
+        </style>
+        
+          
+          </head>
+        
+        
+         <body>
+        
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
+        
+        
+        
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top bg-light animated fadeinUp">
+        
+            <div class="container">
+              <a class="navbar-brand" style="color: black;" href="/"> <img src="images/logo.png" height="50x" width="80px"></a>
               
-                <tr>
-                    <td class="esd-structure es-p25t es-p40b es-p40r es-p40l" esd-custom-block-id="9786" align="left">
-                        <table width="100%" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr>
-                                    <td class="esd-container-frame" width="520" valign="top" align="center">
-                                        <table width="100%" cellspacing="0" cellpadding="0">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="esd-block-text es-m-txt-c es-p15b" align="center">
-                                                        <h2 style="color: #efefef;">Welcome To SMAV Match</h2>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="esd-block-text es-m-txt-c es-p20b" align="center">
-                                                        <p style="color: #efefef;">
-                                                            <p style="color: #efefef;">
-                                                                السلام عليكم ورحمة الله وبركاته
-
-                                                            </p>
-                                                            
-
-
-                                                            <p style="color: #efefef;">
-
-
-                                                                عزيزي المتطوع
-
-                                                            </p>
-
-                                                            <p style="color: white;">
-                                                          
-                                                            تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا إبلاغكم باستلام طلاب انضمامكم لبرنامج سماف مجتمعي ، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..
-                                                             </p>
-                                                    </td>
-                                                </tr>
-                                              
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="esd-structure" align="left">
-                        <table width="100%" cellspacing="0" cellpadding="0">
-                            <tbody>
-                                <tr>
-                                    <td class="esd-container-frame" width="600" valign="top" align="center">
-                                        <table width="100%" cellspacing="0" cellpadding="0">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="esd-block-banner" style="position: relative;" align="center" esdev-config="h2"><a target="_blank">
-                                                            <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://i.giphy.com/media/ImYxfHy3yiE6c5wDPT/giphy.webp" alt title width="100%">
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </td>
-    <!-- /////// -->
-
-
-    <td class="esd-stripe" esd-custom-block-id="9796" align="center" >
-        <table class="es-footer-body" style="border-top:1px solid #333333;" width="600" cellspacing="0" cellpadding="0" align="center" style="background-color: #333333;">
-            <tbody style="background-color: #333333;">
-                <tr style="background-color: #333333;">
-                    <td class="esd-structure es-p20t es-p20b es-p20r es-p20l" align="left">
-                        <!--[if mso]><table width="560" cellpadding="0"
-                                cellspacing="0"><tr><td width="180" valign="top"><![endif]-->
-                        <table class="es-left" cellspacing="0" cellpadding="0" align="left">
-                            <tbody>
-                                <tr>
-                                    <td class="es-m-p0r es-m-p20b esd-container-frame" width="180" valign="top" align="center">
-                                        <table width="100%" cellspacing="0" cellpadding="0" style="background-color: #333333;">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="esd-block-image es-p15b es-m-txt-c" align="left" style="font-size:0"><a target="_blank" href="https://viewstripo.email/"><img src="https://i.imgur.com/WuxuLUZ.png" alt="Flowers logo" style="display: block;" title="Flowers logo" width="135"></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="esd-block-text es-m-txt-c" esd-links-underline="none" align="left">
-                                                        <p><a target="_blank" href="tel:+966 55 222 6883" style="text-decoration: none; color: white;  padding-left: 1rem;"> +966552226883</a></p>
-                                                        <p><a target="_blank" href="smav@dmet.edu.sa" style="text-decoration: none; color: white;  padding-left: 1rem;"> smav@dmet.edu.sa</a></p>
-                                                        <p style="color: white;  padding-left: 1rem;  padding-bottom: 1rem;" > © 2021 SMAV</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!--[if mso]></td><td width="20"></td><td width="360" valign="top"><![endif]-->
-                        <table cellspacing="0" cellpadding="0" align="right" style="background-color: #333333;">
-                            <tbody>
-                                <tr>
-                                    <td class="esd-container-frame" width="360" align="left">
-                                        <table width="100%" cellspacing="0" cellpadding="0">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="esd-block-social es-p15b es-m-txt-c" align="left" style="font-size:0">
-                                                        <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="es-p10r" valign="top" align="center"><a target="_blank" href><img title="Facebook" src="https://tlr.stripocdn.email/content/assets/img/social-icons/circle-gray-bordered/facebook-circle-gray-bordered.png" alt="Fb" width="32"></a></td>
-                                                                    <td class="es-p10r" valign="top" align="center"><a target="_blank" href><img title="Twitter" src="https://tlr.stripocdn.email/content/assets/img/social-icons/circle-gray-bordered/twitter-circle-gray-bordered.png" alt="Tw" width="32"></a></td>
-                                                                    <td class="es-p10r" valign="top" align="center"><a target="_blank" href><img title="Instagram" src="https://tlr.stripocdn.email/content/assets/img/social-icons/circle-gray-bordered/instagram-circle-gray-bordered.png" alt="Inst" width="32"></a></td>
-                                                                    <td class="es-p10r" valign="top" align="center"><a target="_blank" href><img title="Youtube" src="https://tlr.stripocdn.email/content/assets/img/social-icons/circle-gray-bordered/youtube-circle-gray-bordered.png" alt="Yt" width="32"></a></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="esd-block-text es-m-txt-c" align="left">
-                                                        <p style="color: white;">You are receiving this 
-                                                            email because you have visited our site or asked us about regular newsletter.</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!--[if mso]></td></tr></table><![endif]-->
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </td>
+        
+        
+        
+        
+        
+            
+              <button class="navbar-toggler" type="button" data-toggle="collapse" 
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+              aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+            
+          
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+          
+          
+          
+        
+        
+        
+        
+        
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" style="color: rgb(15, 101, 230);" data toggle="dropdown">Home</a>
+              <div class="dropdown-menu">
+                <a href="#WhSMAV" class="dropdown-item">What is SMAV?</a>
+                  <a href="#Goals" class="dropdown-item">اهدافنا</a>
+                  <a href="#footer" class="dropdown-item">Contact </a>
+                  
+              </div>
+            </div>
+          
+            <li class="nav-item">
+                    <a class="nav-link test" style="color: black;" href="/whoSMAV">Who we are ?</a>
+                   </li>
+        
+                   
+        
+                   
+          <li class="nav-item">
+                    <a class="nav-link" style="color: black;" href="/WhatWeDo">what we do ? </a>
+                  </li>
+          
+        
+         
+                  <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" style="color: black;" data toggle="dropdown">Sign up</a>
+                  <div class="dropdown-menu">
+                    <a href="/sign_up_Individuals" class="dropdown-item">Indivuals</a>
+                    <a href="/sign_up_group" class="dropdown-item">gruops</a>
+                    <!-- <a href="/sign_up_admin" class="dropdown-item">admin</a> -->
+        
+                      
+                  </div>
+                </div>
+        
+             
+              
+        
+               
+          </ul>
+          </div>
+          
+          </div>
+          </nav>
+        
 
 
 
