@@ -84,7 +84,16 @@ exports.postRegister=(req,res,next)=>{
             to:email,
             from:"smav@dmet.edu.sa",
             subject:"succeed",
-            html:"<h1> الرجاء ارسال ملف يتضمن فيه الاسم الاول واسم اب والاسم الاخير والايميل </h1>"
+            html:`
+            
+            <h1> الرجاء ارسال ملف يتضمن فيه الاسم الاول واسم اب والاسم الاخير والايميل </h1>"
+
+            
+            `
+            
+            
+            
+            
           })
 
         }else{
