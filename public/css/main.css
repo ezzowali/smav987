@@ -363,9 +363,20 @@
 
           
           .img-col3{
-            height: 650px;
+            height: 200px;
             object-fit: cover;
             object-position: center center;
+          }
+
+          
+
+          .centered {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          
+            
           }
 
           video {
