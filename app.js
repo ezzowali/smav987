@@ -63,7 +63,6 @@ const admin=require("./routes/admin");
 
 
 
-const samvHajjUsers = require('./models/samvHajjUsers');
 
 const Users = require('./models/Users');
 
