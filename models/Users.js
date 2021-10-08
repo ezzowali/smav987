@@ -21,7 +21,8 @@ var smav2Schema =new Schema({
   Specialty:Array,
   SCFHS:String,
   times:String,
-  accept:String
+  accept:String,
+  url_video:String,
 
  
   

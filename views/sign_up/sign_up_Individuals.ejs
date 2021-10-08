@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/group.css">
+    <link rel="stylesheet" href="css/main_style.css">
+
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
-
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap" rel="stylesheet">
   
@@ -23,34 +27,30 @@
 
   <style>
 
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+
+.inputs {
+    float: left;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #765ca5
+  color: #cccccc
 ;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #765ca5
+  color: #cccccc
 ;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: #765ca5
+  color: #cccccc
 ;
 }
 
 select{
  
-    color:#765ca5;
+    color:#cccccc;
 
 }
   </style>
@@ -60,10 +60,16 @@ select{
   
   
   <body>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top bg-light animated fadeinUp">
 
         <div class="container">
-          <a class="navbar-brand" style="color: black;" href="/"> <img src="images/logo.png" height="50x" width="80px"></a>
+          <a class="navbar-brand" style="color: black;" href="/"> <img src="images/SMAV_LOGO.png" height="90x" width="80px"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" 
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
           aria-expanded="false" aria-label="Toggle navigation">
@@ -103,14 +109,17 @@ select{
       
       </div>
       </nav>
+      
     
       <section style="height: 5rem;"></section>
 
+      <section id="registerForm">
+
       <div class="container ">
            
-    <div class="card-body content" style="color: white;  text-align:left; ">
+    <div class="card-body content" style="color: white;">
       
-      <h1 style="text-align: center;"> <img src="images/logo.png" height="70x" width="100px"></h1>
+      <h1 style="text-align: center;"> <img src="images/SMAV_LOGO.png" height="90x" width="80"></h1>
       
       <% if (message) { %>
         <div class="alert alert-danger alert-dismissible fade show">
@@ -138,59 +147,71 @@ select{
 
       <form action="/sign_up_Individuals" method="POST" enctype="multipart/form-data">
 
+        <div class="row">
+
+          <div class="col-md-2 mb-3">
+            
+          
+          </div>
+      
+          <div class="col-md-8 mb-3">
+
     <div class="frontside">
       <div class="card " >
-          <div class="card-body text-center">
-            <h4 class="card-title fas fa-user-circle" style="color: #0086d3;"> <i class=" "></i>  المعلومات الشخصية </h4>
+          <div class="card-body text-center" style="background-color: #9a87bd;">
+            <h4 class="card-title fas fa-user-circle"  style="color: #2083c6; font-weight: bolder;"> <i class=" "></i>  المعلومات الشخصية </h4>
 
    
             <div class="row">
-
-        
-             
-             
-        
-        
-   
-        
-        
                 <div class="col-md-4 mb-3">
-        
-        
-
                   <input type="text" class="effect-16" id="firstName_En" name="firstName_En" placeholder="First Name" value="" required>
                   <span class="focus-border"></span>
                 </div>
+              </div>
+
+
+                <div class="row">
                 <div class="col-md-4 mb-3" style="color: black;">
                   <input type="text" class="effect-16" id="middleName_En" name="middleName_En" placeholder="Middle Name" value="" required>
                   <span class="focus-border"></span>
         
                 </div>
+              </div>
+
         
-        
+              <div class="row">
                 <div class="col-md-4 mb-3" style="color: black;">
                   <input type="text" class="effect-16" id="lastName_En" name="lastName_En" placeholder="Last Name" value="" required>
                   <span class="focus-border"></span>
                 </div>
+              </div>
 
 
+              <div class="row">
         
                 <div class="col-md-4 mb-3" style="color: black;" >
 
-                <input type="number"  class="effect-16" min="500000000" name="phone" value="" placeholder=" Phone" required>
+                <input type="number"  class="effect-16 inputs" min="500000000" name="phone" value="" placeholder=" Phone" required>
                 <span class="focus-border"></span> 
             </div>
+          </div>
+
+
+          <div class="row">
 
             <div class="col-md-4 mb-3" style="color: black;">
 
-              <input type="email" class="effect-16" name="email" value="" placeholder="Email  " required>
+              <input type="email" class="effect-16 inputs" name="email" value="" placeholder="Email  " required>
               <span class="focus-border"></span>   
           </div>
+        </div>
+
         
         
+        <div class="row">
 
             <div class="col-md-4 mb-3" style="color: black;">
-              <select name="gender" class="select effect-16" required>
+              <select name="gender" class="select effect-16 inputs" required>
                 <option value="">--  Gender  --</option>
                 <option value="male">male</option>
                 <option value="female">female</option>
@@ -198,21 +219,26 @@ select{
                 </select>
                 <span class="focus-border"></span>
                </div>
+              </div>
    
          
             
+        <div class="row">
             
             <div class="col-md-4 mb-3" style="color: black;">
 
             
-              <input type="number" class="effect-16" id="age" name="age" placeholder="Age" min="14" max="100" required>
+              <input type="number" class="effect-16 inputs" id="age" name="age" placeholder="Age" min="14" max="100" required>
               <span class="focus-border"></span>
             </div>
+          </div>
+
         
+          <div class="row">
 
 
             <div class="col-md-6 mb-3" style="color: black;">
-              <select name="city" class="select effect-16" onchange="CheckingOther_city(this.value);"   required>
+              <select name="city" class="select effect-16 inputs" onchange="CheckingOther_city(this.value);"   required>
                 <option value="">--  city  --</option>
                 <option value="Riyadh">Riyadh</option>
                 <option value="Makkah">Makkah</option>
@@ -250,29 +276,11 @@ select{
                 <input type="text" id="other_id_city" name="city" style='display:none;'/>
                 <span class="focus-border"></span>
                </div>
-        
-         
-   
-
-        
-                  </div>
-        </div>
-      </div>
-
-
-
-      </div>
-
-
-      <div class="frontside" >
-        <div class="card " style="color: black;" >
-
-            <div class="card-body  text-center" style="background-color: white;">
-
+              </div>
 
               <h4 class="card-title fas fa-university" style="color: #0086d3;">  المعلومات الأكاديمية   </h4>
-  
-            
+
+
               <div class="row">
 
                 <div class="col-md-4 mb-3">
@@ -280,80 +288,80 @@ select{
                   <input type="text" class="effect-16" name="university" placeholder="University or workplace" value="" required>
                   <span class="focus-border"></span>
                 </div>
-               
-   
-      
- <!-- <input type="text" name="city" list="citynames">
-<datalist id="citynames">
-  <option value="Boston">
-  <option value="Cambridge">
-</datalist> -->
+              </div>
+
+              <div class="row">
+
+              <div class="col-md-3 mb-3">
+                <select name="EducationLevel" class="select effect-16 inputs"  onchange='CheckingOther_eduLev(this.value);'
+                required>
+                  <option value="">-- Education Level   --</option>
+                  <option value="1st year student"> 1st year student </option>
+        <option value="2nd year student">2nd year student </option>
+    <option value="3rd year student"> 3rd year student </option>
+    <option value="4th year student ">  4th year student </option>
+
+    <option value="5th year student">5th year student </option>
+    <option value="6th year student"> 6th year student </option>
+    <option value="fresh graduate">  fresh graduate </option>
+
+    <option value="Intern">Intern </option>
+    <option value="R1"> R1 </option>
+    <option value="R2">R2 </option>
 
 
-                <div class="col-md-3 mb-3">
-                  <select name="EducationLevel" class="select effect-16"  onchange='CheckingOther_eduLev(this.value);'
-                  required>
-                    <option value="">-- Education Level   --</option>
-                    <option value="1st year student"> 1st year student </option>
-          <option value="2nd year student">2nd year student </option>
-      <option value="3rd year student"> 3rd year student </option>
-      <option value="4th year student ">  4th year student </option>
+    <option value="R3">R3 </option>
+    <option value="R4"> R4 </option>
+    <option value="Specialist ">Specialist  </option>
 
-      <option value="5th year student">5th year student </option>
-      <option value="6th year student"> 6th year student </option>
-      <option value="fresh graduate">  fresh graduate </option>
+    <option value="consultant ">consultant  </option>
+    <option value="other"> other </option>
 
-      <option value="Intern">Intern </option>
-      <option value="R1"> R1 </option>
-      <option value="R2">R2 </option>
-
-
-      <option value="R3">R3 </option>
-      <option value="R4"> R4 </option>
-      <option value="Specialist ">Specialist  </option>
-
-      <option value="consultant ">consultant  </option>
-      <option value="other"> other </option>
-
-      <input type="text" id="other_id_EducationLevel" name="EducationLevel" style='display:none;'/>
+    <input type="text" id="other_id_EducationLevel" name="EducationLevel" style='display:none;'/>
 
 
 
-    </select>
-    <span class="focus-border"></span>
-                </div>
-                
+  </select>
+  <span class="focus-border"></span>
+              </div>
+            </div>
 
-      
-                <div class="col-md-3 mb-3">
-                  <select name="Specialty" class="select effect-16" required onchange='CheckingOther_spe(this.value);'>
-                    <option value="">-- Specialty    --</option>
-                    <option value="medicine "> medicine   </option>
-          <option value="dentistry ">dentistry   </option>
-      <option value="pharmacy"> pharmacy  </option>
-      <option value="nursing ">  nursing  </option>
-      <option value="public health"> public health  </option>
-      <option value="Applied Medical Sciences">Applied Medical Sciences  </option>
-      <option value="other"> other  </option>
-      </select>
+            <div class="row">
 
-      <input type="text" id="other_id_Specialty" name="Specialty" style='display:none;'/>
+            <div class="col-md-3 mb-3">
+              <select name="Specialty" class="select effect-16 inputs"  required onchange='CheckingOther_spe(this.value);'>
+                <option value="">-- Specialty    --</option>
+                <option value="medicine "> medicine   </option>
+      <option value="dentistry ">dentistry   </option>
+  <option value="pharmacy"> pharmacy  </option>
+  <option value="nursing ">  nursing  </option>
+  <option value="public health"> public health  </option>
+  <option value="Applied Medical Sciences">Applied Medical Sciences  </option>
+  <option value="other"> other  </option>
+  </select>
 
-      <span class="focus-border"></span>
-                </div>
+  <input type="text" id="other_id_Specialty" name="Specialty" style='display:none;'/>
 
-      
+  <span class="focus-border"></span>
+            </div>
+
+          </div>
+
+          <div class="row">
+
         <div class="col-md-4 mb-3">
-            <input type="text" class="effect-16" name="SCFHS" value="" placeholder="SCH number (Optional)" >
-            <span class="focus-border"></span>
-        </div>
+          <input type="text" class="effect-16" name="SCFHS" value="" placeholder="SCH number (Optional)" >
+          <span class="focus-border"></span>
+      </div>
+    </div>
 
+    <div class="row">
 
-        <div class="col-md-3 mb-3">
-          <select name="times" class="select effect-16" required>
-            <option value="">-- How many times do you volunteer?    --</option>
-            <option value="1 "> 1   </option>
-  <option value="2 ">2   </option>
+    <div class="col-md-2 mb-3">
+      <select name="times" class="select effect-16 inputs" required>
+        <option value=""> How many times do you volunteer? </option>
+        <option value="1 "> 1   </option>
+<option value="2 ">2   </option>
 <option value="3"> 3  </option>
 <option value="4 ">  4  </option>
 <option value="5"> 5  </option>
@@ -366,20 +374,56 @@ select{
 <option value="10>"> 10>  </option>
 </select>
 <span class="focus-border"></span>
-        </div>
+    </div>
 
 
-    
+                  </div>
+
+    <div class="row">
+
+                  <div class="col-md-4 mb-3"style="color:black">
+                    <input type="text" class="effect-16" name="url_video" placeholder="اضف رابط الفيديو هنا "  required>
+               
+            
+                    <small>
+                      الرجاء اتباع التعليمات التي في هذا الملف 
+                      <br>
+
+                      <a href="TestFile/شروط الفيديو.docx" style=" color:#cccccc;" download> Click to Download </a>
+
+                      
+                    </small>
+            
+                  <span class="focus-border"></span>
+                </div>
+              </div>
+
+                
+
+                  <div class="row">
 
     <div class="col-md-12">
                       
-        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <button type="submit" class="btn btn-info">تسجيل</button>
-      </div>
-             </div>
-            </div>
-        </div>
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <button type="submit" class="btn btn-info">تسجيل</button>
     </div>
+        </div>
+
+
+      </div>
+
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
 
 
 
@@ -388,8 +432,14 @@ select{
         </form>
     </div>
   </div>
+</section>
 
-  
+
+
+</body>
+
+
+<%- include('../includes/footer') %>
 
 
   <script type="text/javascript">
@@ -445,9 +495,11 @@ select{
     </script> 
 
 
-  </body>
+
   
   
   
+
+
   
   
