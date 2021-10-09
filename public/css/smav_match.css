@@ -76,7 +76,7 @@
       
      .icon_programm{
   
-      color: #2083c6      ;
+      color: white      ;
      }
        
   
@@ -123,6 +123,10 @@
   width: 300;
   border-radius:10%;
   margin: 10px
+}
+
+.icon_paths{
+  color: white;
 }
 
 .img-sty2{
@@ -175,15 +179,7 @@
 }
       
           /* //////////////////////// */
-      #footer{
-      
-       
-        padding: 6% ;
-          text-align: center;
-          background-color: #cfe5f4;
-      
-      
-      }
+ 
       .fa{
       
       

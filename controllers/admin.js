@@ -42,7 +42,6 @@ exports.getadminGroup=(req,res,next)=>{
 
 
 
-
 }
 
 
