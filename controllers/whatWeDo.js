@@ -45,3 +45,14 @@ exports.getWhatWeDo=(req,res,next)=>{
   });
   }
   
+
+
+
+exports.getMATCH=(req,res,next)=>{
+
+
+  res.render('SMAV_MATCH',{
+
+  });
+  }
+  
