@@ -1,0 +1,43 @@
+
+ 
+
+          /* //////////////////////// */
+    
+
+          #soon{
+    
+            background-image:linear-gradient(  rgba(6, 174, 240, 0.5) 100% 100%, rgb(31, 31, 31)100%),url("../images/smav_id1.jpg")  ;      
+    
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+    
+                padding: 20% 15%;
+                text-align: center;
+        
+                color:black;
+      
+      
+          
+          }
+
+          /* #h{
+            padding: 20% 15%; 
+          } */
+
+
+
+          /* //////// */
+
+
+
+          #footer{
+        
+         
+            padding: 6% ;
+              text-align: center;
+              background-color: #cfe5f4;
+          
+          
+          }
