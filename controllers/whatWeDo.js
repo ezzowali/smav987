@@ -48,11 +48,9 @@ exports.getWhatWeDo=(req,res,next)=>{
 
 
 
-exports.getMATCH=(req,res,next)=>{
+  exports.getOpen=(req,res,next)=>{
 
 
-  res.render('SMAV_MATCH',{
+    res.render('opening_soon');
+    }
 
-  });
-  }
-  
