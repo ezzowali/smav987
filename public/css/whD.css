@@ -11,7 +11,7 @@
 
       #title{
     
-        background-image:linear-gradient( rgba(6, 173, 240, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/group.JPG")  ;      
+        background-image:linear-gradient( rgba(6, 174, 240, 0.877)  100%, rgb(31, 31, 31)100%),url("../images/group.JPG")  ;      
         height: 750px;
     background-position: center;
       background-repeat: no-repeat;
@@ -25,8 +25,10 @@
       /* //////////////////////// */
       #proramm_SMAV{
       
-        padding: 4% 15%;
-        background-image:linear-gradient( rgba(6, 128, 177, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/volunteer1.jpg")  ;      
+        padding: 10% 15%;
+        /* background-image:linear-gradient( rgba(6, 128, 177, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/whatWeDo/drop.JPG")  ;   */
+        
+        background-image: url("../images/whatWeDo/drop.JPG");
     
         background-position: center;
         background-repeat: no-repeat;
@@ -46,7 +48,13 @@
   
       color: #2083c6      ;
      }
-       
+       /* //// */
+
+     #tire{
+      background-color: black;
+      height: 0.5rem;
+      
+      }
   
       /* ////////////////// */
    
@@ -58,6 +66,8 @@
         animation-duration: 2s; /* don't forget to set a duration! */
        
       }
+
+
   
 
 .card-body{
