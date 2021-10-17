@@ -59,7 +59,7 @@
         background-image:linear-gradient( rgba(86, 202, 248, 0.493) 100%, rgb(31, 31, 31)100%),url("../images/whoWeare/wh.jpg")  ;      
         background-size: cover;
        
-        padding: 1% 15%;
+        padding: 20% 15%;
       }
   
       /* ##### */
@@ -175,7 +175,7 @@ background-size: cover;
         /* ###### */
         #height{
           padding: 15% 15%;
-          background-color: #9fd7fd;
+   
           }
         /* ###### */
   
@@ -227,6 +227,24 @@ background-size: cover;
   h6{
     color: white;
   }
+
+
+  #First{
+
+    background-image:linear-gradient( rgba(86, 202, 248, 0.493) 100%, rgb(31, 31, 31)100%),url("../images/whoWeare/wh.jpg")  ;      
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+        padding: 20% 15%;
+        text-align: center;
+
+        color:black;
+
+        ;
+  }
+
 
 
 
