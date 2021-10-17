@@ -1,6 +1,6 @@
 
     #height{
-      padding: 4% 15%;
+      padding: 5% 15%;
       }
    
 
@@ -173,8 +173,8 @@ background-size: cover;
   
         /* ###### */
         #height{
-          height: 50px;
-        }
+          padding: 5% 15%;
+          }
         /* ###### */
   
         #WhSMAV{
