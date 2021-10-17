@@ -69,3 +69,10 @@ exports.getMATCH=(req,res,next)=>{
     }
     
   
+
+    exports.getHajj=(req,res,next)=>{
+
+
+      res.render('SMAV_HAJJ');
+      }
+      

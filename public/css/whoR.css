@@ -1,6 +1,7 @@
 
     #height{
       padding: 5% 15%;
+      background-color: #9fd7fd;
       }
    
 
@@ -173,7 +174,8 @@ background-size: cover;
   
         /* ###### */
         #height{
-          padding: 5% 15%;
+          padding: 15% 15%;
+          background-color: #9fd7fd;
           }
         /* ###### */
   
