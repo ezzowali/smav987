@@ -52,7 +52,8 @@ exports.postRegister=(req,res,next)=>{
     identity_id:req.body.identity_id,
     accept:"wait",
     url_video:req.body.url_video,
-    nationality:req.body.nationality
+    nationality:req.body.nationality,
+    company:req.body.company
 
     
 
