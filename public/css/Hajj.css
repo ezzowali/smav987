@@ -36,7 +36,7 @@
 
    #OurWay{
 
-    background-image:linear-gradient( rgba(204, 204, 204, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/ourG.JPG")  ;      
+    background-image:linear-gradient( rgba(6, 128, 177, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/ourG.JPG")  ;      
  
     background-position: center;
     background-repeat: no-repeat;
@@ -62,30 +62,12 @@
        
        /* //////////////////////// */
  
- 
-       #Goals{
-  
- 
- 
-         background-image:linear-gradient( rgba(204, 204, 204, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/ourG.JPG")  ;      
- 
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
- 
- 
-         padding: 1% 15%;
-         text-align: center;
- 
-         color:black;
-       }
- /* /////// */
- 
+
        #proramm_SMAV{
          
        
          padding: 4% 15%;
-         background-image:linear-gradient( rgba(6, 128, 177, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/inP.JPG")  ;      
+         background-image:linear-gradient( rgba(248,213,61,0.747)   100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/inP.JPG")  ;      
      
          background-position: center;
          background-repeat: no-repeat;
@@ -132,7 +114,7 @@
  
  
    text-align: center;
-   background-image:linear-gradient( rgba(117, 91, 165, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/trip.JPG")  ;      
+   background-image:linear-gradient( rgba(6, 128, 177, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/trip.JPG")  ;      
    color:#000;
    padding: 7% 15%;
    background-position: center;
@@ -204,8 +186,10 @@
 
  #ourJobs{
 
+  
+  background-image:linear-gradient( rgba(248,213,61,0.747)   100%, rgb(31, 31, 31)100%),url("../images/Hajj/ourJobsBack.JPG")  ;      
 
-    background-color:#f8d43d;             
+          
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

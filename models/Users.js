@@ -24,6 +24,7 @@ var smav2Schema =new Schema({
   accept:String,
   url_video:String,
   identity_id:{ type: Number, required: true, unique: true },
+  nationality:String,
 
  
   

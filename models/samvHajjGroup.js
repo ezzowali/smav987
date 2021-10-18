@@ -7,23 +7,27 @@ const Schema = mongoose.Schema;
 
 var smav2Schema =new Schema({
 
-  fullName:String,
-
-
-  identity_id:{ type: Number, required: true, unique: true },
-
-  email:String,
+  firstName_En:String,
+  middleName_En:String,
+  lastName_En:String,
+  email:{ type: String, required: true, unique: true },
   phone:Number,
+  gender:String,
+  age:Number,
+  city:Array,
+  university:String,
+  EducationLevel:Array,
+  Specialty:Array,
+  SCFHS:String,
+  times:String,
+  accept:String,
+  url_video:String,
+  identity_id:{ type: Number, required: true, unique: true },
+  nationality:String,
 
-  company:String ,
-  jopTitle:String,
-  TeamSize:String,
-  groupNumber:String,
-  password:String,
 
-  excel:String,
-  reason:String,
-  resetToken:String
+
+  company:String
 
 
 

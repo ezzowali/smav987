@@ -27,7 +27,7 @@ const transporter=nodemailer.createTransport(sendgridTransport({
   
   }))
 
-  
+
 exports.postRegister=(req,res,next)=>{
   const excel =req.file;
   console.log(req.file);
@@ -35,19 +35,25 @@ exports.postRegister=(req,res,next)=>{
   // console.log(image);
 
   const newUser=new samvHajjGroup({
-    fullName:req.body.fullName,
+    firstName_En:req.body.firstName_En,
+    middleName_En:req.body.middleName_En,
+    lastName_En:req.body.lastName_En,
+    age:req.body.age,
+    gender:req.body.gender,
 
-    identity_id:req.body.identity_id,
-
-    email:req.body.email,
+    city:req.body.city,
     phone:req.body.phone,
-    company:req.body.company,
-    jopTitle:req.body.jopTitle,
-    TeamSize:req.body.TeamSize,
-    groupNumber:req.body.groupNumber,
+    university:req.body.university,
+    Specialty:req.body.Specialty,
+    EducationLevel:req.body.EducationLevel,
+    email:req.body.email,
+    SCFHS:req.body.SCFHS,
+    times:req.body.times,
+    identity_id:req.body.identity_id,
     accept:"wait",
-    excel:excel.path,
-    reason:"none"
+    url_video:req.body.url_video,
+    nationality:req.body.nationality
+
     
 
   

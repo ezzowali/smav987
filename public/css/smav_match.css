@@ -38,7 +38,7 @@
  
 
 
-        background-image:linear-gradient( rgba(204, 204, 204, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/ourG.JPG")  ;      
+        background-image:linear-gradient( rgba(6, 128, 177, 0.747) 100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/ourG.JPG")  ;      
 
     background-position: center;
     background-repeat: no-repeat;
@@ -53,10 +53,10 @@
 /* /////// */
 
       #proramm_SMAV{
-        
+
       
         padding: 4% 15%;
-        background-image:linear-gradient( rgba(6, 128, 177, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/inP.JPG")  ;      
+        background-image:linear-gradient( rgba(204, 204, 204, 0.747)  100%, rgb(31, 31, 31)100%),url("../images/SMAV_MATCH/inP.JPG")  ;      
     
         background-position: center;
         background-repeat: no-repeat;
