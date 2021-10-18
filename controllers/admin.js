@@ -14,14 +14,12 @@ const sendgridTransport=require("nodemailer-sendgrid-transport");
 
 
 const transporter=nodemailer.createTransport(sendgridTransport({
-  auth:{
-    api_key:"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"
-  
-  
-  }
-  
-  }))
-
+    auth:{
+      api_key:"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"
+      
+    }
+    
+    }))
 
 
 

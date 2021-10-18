@@ -12,19 +12,27 @@ const nodemailer=require("nodemailer")
 const sendgridTransport=require("nodemailer-sendgrid-transport")
 
 
+
+
+
+const transporter=nodemailer.createTransport(sendgridTransport({
+  auth:{
+    api_key:"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"
+    
+  }
+  
+  }))
+
+
+
+
 const bcrypt = require('bcryptjs');
 
 
 const saltRounds = 10;
 
-const transporter=nodemailer.createTransport(sendgridTransport({
-  auth:{
-    api_key:"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"
-  
-  
-  }
-  
-  }))
+
+
 
 
 
@@ -82,22 +90,24 @@ exports.postRegister=(req,res,next)=>{
 
 
 
-        if (!err) {
+ 
 
-          req.flash('success', 'Success!!');
-          res.redirect("/sign_up_Individuals")
+      
 
-
-          const email=req.body.email
+         
           
+
+
+    
+
           return transporter.sendMail({
             to:email,
-            from:"Smav@dmet.edu.sa",
-            subject:"succeed",
+            from:"smav.darb@gmail.com",
+            subject:"SMAV",
             html:`
 
             <p class="esd-block-image" align="center" style="font-size:0"><a href="https://www.smavacadmey.com" target="_blank"><img
-            src="https://i.imgur.com/WuxuLUZ.png" alt style="display: block;" width="562"></a></p>
+            src="https://i.imgur.com/vUIRe8Z.png" alt style="display: block;" width="562"></a></p>
 
 
 
@@ -140,31 +150,23 @@ exports.postRegister=(req,res,next)=>{
 </div>
 
         
-
-
-
-
-
-    
-
-
-
             `
-           
             
-          
+            
+            
+            
           })
 
-          
-          
-
-        }else{
-          console.log(err);
-
+        
 
         
-        }
+      
       })
+
+      req.flash('success', 'Success!!');
+
+
+      res.redirect("/sign_up_Individuals")
   
 
 
