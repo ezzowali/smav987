@@ -3223,3 +3223,4 @@
 ::1 - - [19/Oct/2021:14:24:25 +0000] "GET /SMAV_MATCH HTTP/1.1" 304 - "http://localhost:3000/SMAV_RELIEF" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
 ::1 - - [19/Oct/2021:14:25:34 +0000] "GET /WhatWeDo HTTP/1.1" 200 - "http://localhost:3000/SMAV_MATCH" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
 ::1 - - [19/Oct/2021:14:25:37 +0000] "GET /SMAV_RELIEF HTTP/1.1" 304 - "http://localhost:3000/WhatWeDo" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+::1 - - [19/Oct/2021:14:28:48 +0000] "GET /SMAV_HAJJ HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"

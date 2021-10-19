@@ -89,7 +89,7 @@ exports.postRegister=(req,res,next)=>{
           const email=req.body.email
           return transporter.sendMail({
             to:email,
-            from:"smav.darb@gmail.com",
+            from:"program_ru@dmet.edu.sa",
             subject:"SMAV",
             html:`
 
