@@ -76,3 +76,8 @@ exports.getMATCH=(req,res,next)=>{
       res.render('SMAV_HAJJ');
       }
       
+
+
+      exports.getRelif=(req,res,next)=>{
+        res.render('SMAV_RELIEF')
+      }

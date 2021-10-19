@@ -255,7 +255,9 @@ exports.getadminUsersRefuse=(req,res,next)=>{
 
 
 
-  Users.find({accept:"refuse"}).select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  Users.find({accept:"refuse"}).select("firstName_En middleName_En lastName_En email identity_id \
+  age city university Specialty times SCFHS nationality \
+  EducationLevel phone url_video accept skills gender").then(users=>{
 
     res.render("admin/display_usersRefuse",{
       users:users,
@@ -281,7 +283,9 @@ exports.getadminUsersWait=(req,res,next)=>{
 
 
 
-  Users.find({accept:"wait"}).select("firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
+  Users.find({accept:"wait"}).select("firstName_En middleName_En lastName_En email identity_id \
+  age city university Specialty times SCFHS nationality \
+  EducationLevel phone url_video accept skills gender ").then(users=>{
 
     res.render("admin/display_usersWait",{
       users:users,
@@ -911,7 +915,9 @@ exports.getAcceptExcel=(req,res,next)=>{
 
 
 
-  Users.find({accept:"accept"}).select("times Specialty university city accept firstName_En  middleName_En lastName_En email age gender  SCFHS  EducationLevel  phone  ").then(data=>{
+  Users.find({accept:"accept"}).select("firstName_En middleName_En lastName_En email identity_id \
+  age city university Specialty times SCFHS nationality \
+  EducationLevel phone url_video accept skills gender ").then(data=>{
 
 
     res.send(JSON.stringify(data))

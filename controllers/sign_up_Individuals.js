@@ -12,9 +12,6 @@ const nodemailer=require("nodemailer")
 const sendgridTransport=require("nodemailer-sendgrid-transport")
 
 
-
-
-
 const transporter=nodemailer.createTransport(sendgridTransport({
   auth:{
     api_key:"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"
@@ -23,17 +20,10 @@ const transporter=nodemailer.createTransport(sendgridTransport({
   
   }))
 
-
-
-
 const bcrypt = require('bcryptjs');
 
 
 const saltRounds = 10;
-
-
-
-
 
 
 exports.postRegister=(req,res,next)=>{
@@ -47,7 +37,6 @@ exports.postRegister=(req,res,next)=>{
     lastName_En:req.body.lastName_En,
     age:req.body.age,
     gender:req.body.gender,
-
     city:req.body.city,
     phone:req.body.phone,
     university:req.body.university,
@@ -59,7 +48,8 @@ exports.postRegister=(req,res,next)=>{
     identity_id:req.body.identity_id,
     accept:"wait",
     url_video:req.body.url_video,
-    nationality:req.body.nationality
+    nationality:req.body.nationality,
+    skills:req.body.skills
 
 
 

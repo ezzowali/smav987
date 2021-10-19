@@ -7,7 +7,6 @@ const Schema = mongoose.Schema;
 
 var smav2Schema =new Schema({
 
-
   firstName_En:String,
   middleName_En:String,
   lastName_En:String,
@@ -25,11 +24,13 @@ var smav2Schema =new Schema({
   url_video:String,
   identity_id:{ type: Number, required: true, unique: true },
   nationality:String,
+  skills:String
 
  
   
 
 });
+
 
 
 

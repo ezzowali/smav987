@@ -29,19 +29,15 @@ const transporter=nodemailer.createTransport(sendgridTransport({
 
 
 exports.postRegister=(req,res,next)=>{
-  const excel =req.file;
-  console.log(req.file);
-  console.log(req.body)
-  // console.log(image);
 
   const newUser=new samvHajjGroup({
+    
     firstName_En:req.body.firstName_En,
     middleName_En:req.body.middleName_En,
     lastName_En:req.body.lastName_En,
     age:req.body.age,
     gender:req.body.gender,
-
-    city:req.body.city,
+     city:req.body.city,
     phone:req.body.phone,
     university:req.body.university,
     Specialty:req.body.Specialty,
@@ -53,7 +49,8 @@ exports.postRegister=(req,res,next)=>{
     accept:"wait",
     url_video:req.body.url_video,
     nationality:req.body.nationality,
-    company:req.body.company
+    company:req.body.company,
+    skills:req.body.skills
 
     
 
@@ -92,13 +89,54 @@ exports.postRegister=(req,res,next)=>{
           const email=req.body.email
           return transporter.sendMail({
             to:email,
-            from:"smav@dmet.edu.sa",
-            subject:"succeed",
+            from:"smav.darb@gmail.com",
+            subject:"SMAV",
             html:`
-            
-            <h1> الرجاء ارسال ملف يتضمن فيه الاسم الاول واسم اب والاسم الاخير والايميل </h1>"
+
+            <p class="esd-block-image" align="center" style="font-size:0"><a href="https://www.smavacadmey.com" target="_blank"><img
+            src="https://i.imgur.com/vUIRe8Z.png" alt style="display: block;" width="562"></a></p>
+
+
+
+
+
+        
+            <div style="text-align: center;">
+
+
 
             
+
+<p style="color: #000000;">
+    السلام عليكم ورحمة الله وبركاته
+
+</p>
+
+
+
+
+<p style="color: #000000;">
+
+
+    عزيزي المتطوع
+
+</p>
+
+<p style="color: 000000;">
+
+    تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا إبلاغكم باستلام
+    طلاب انضمامكم لبرنامج سماف مجتمعي ، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله
+</p>
+
+
+<p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">
+    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://www.funimada.com/assets/images/cards/big/thank-you-9.gif" alt title width="70%">
+</a>
+</p>
+
+</div>
+
+        
             `
             
             

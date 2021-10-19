@@ -19,6 +19,9 @@ router.get("/SMAV_MATCH",whatWeDoController.getMATCH)
 
 router.get("/SMAV_HAJJ",whatWeDoController.getHajj)
 
+router.get("/SMAV_RELIEF",whatWeDoController.getRelif)
+
+
 
 router.get("/opening_soon",whatWeDoController.getOpen)
 
