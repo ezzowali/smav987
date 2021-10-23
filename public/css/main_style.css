@@ -87,7 +87,7 @@
     
      
   padding: 1.2% ;
-    
+    text-align: right;
     background-color: #000;
     color: #ccc;
 
@@ -101,17 +101,5 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-
-}
-
-
-@media only screen and (max-width: 600px) {
-  footer{
-
-    padding: 1.2% ;
-    text-align: center;
-    background-color: #000;
-    color: #ccc;
-  }
 
 }
