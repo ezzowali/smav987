@@ -35,6 +35,7 @@ exports.postRegister=(req,res,next)=>{
     firstName_En:req.body.firstName_En,
     middleName_En:req.body.middleName_En,
     lastName_En:req.body.lastName_En,
+    thirdName_AR:req.body.thirdName_AR,
     age:req.body.age,
     gender:req.body.gender,
     city:req.body.city,
@@ -81,16 +82,6 @@ exports.postRegister=(req,res,next)=>{
 
 
 
- 
-
-      
-
-         
-          
-
-
-    
-
           return transporter.sendMail({
             to:email,
             from:"program_ru@dmet.edu.sa",
@@ -128,9 +119,9 @@ exports.postRegister=(req,res,next)=>{
 
 <p style="color: 000000;">
 
-    تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا إبلاغكم باستلام
-    طلاب انضمامكم لبرنامج سماف مجتمعي ، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله
-</p>
+
+تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا 
+إبلاغكم باستلام طلب انضمامكم لبرنامج سماف مجتمعي، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..</p>
 
 
 <p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">

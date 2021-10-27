@@ -911,11 +911,32 @@ exports.getWait=(req,res,next)=>{
 exports.getAcceptExcel=(req,res,next)=>{
 
 
+//  firstName_En:String,
+//   middleName_En:String,
+//   lastName_En:String,
+  
+//   thirdName_AR:String,
+
+//   email:{ type: String, required: true, unique: true },
+//   phone:Number,
+//   gender:String,
+//   age:Number,
+//   city:Array,
+//   university:String,
+//   EducationLevel:Array,
+//   Specialty:Array,
+//   SCFHS:String,
+//   times:String,
+//   accept:String,
+//   url_video:String,
+//   identity_id:{ type: Number, required: true, unique: true },
+//   nationality:String,
+//   company:String,
+//   skills:String
 
 
 
-
-  Users.find({accept:"accept"}).select("firstName_En middleName_En lastName_En email identity_id \
+  Users.find({accept:"wait"}).select("thirdName_AR firstName_En middleName_En lastName_En  email identity_id \
   age city university Specialty times SCFHS nationality \
   EducationLevel phone url_video accept skills gender ").then(data=>{
 

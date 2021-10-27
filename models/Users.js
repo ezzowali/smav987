@@ -10,6 +10,11 @@ var smav2Schema =new Schema({
   firstName_En:String,
   middleName_En:String,
   lastName_En:String,
+
+  thirdName_AR:String,
+
+
+
   email:{ type: String, required: true, unique: true },
   phone:Number,
   gender:String,
