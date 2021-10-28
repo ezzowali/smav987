@@ -89,7 +89,7 @@ exports.postRegister=(req,res,next)=>{
             html:`
 
             <p class="esd-block-image" align="center" style="font-size:0"><a href="https://www.smavacadmey.com" target="_blank"><img
-            src="https://thumbs.gfycat.com/WeepyOddballBagworm-mobile.mp4" alt style="display: block;" width="562"></a></p>
+            src="https://i.imgur.com/vUIRe8Z.png" alt style="display: block;" width="562"></a></p>
 
 
 
@@ -125,7 +125,7 @@ exports.postRegister=(req,res,next)=>{
 
 
 <p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">
-    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://i.imgur.com/qILMxkY.jpeg" alt title width="70%">
+    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://thumbs.gfycat.com/WeepyOddballBagworm-mobile.mp4" alt title width="70%">
 </a>
 </p>
 
