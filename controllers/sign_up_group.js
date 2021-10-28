@@ -91,7 +91,6 @@ exports.postRegister=(req,res,next)=>{
             from:"program_ru@dmet.edu.sa",
             subject:"SMAV",
             html:`
-
             <p class="esd-block-image" align="center" style="font-size:0"><a href="https://www.smavacadmey.com" target="_blank"><img
             src="https://i.imgur.com/vUIRe8Z.png" alt style="display: block;" width="562"></a></p>
 
@@ -125,18 +124,17 @@ exports.postRegister=(req,res,next)=>{
 
 
 تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا 
-إبلاغكم باستلام طلب انضمامكم لبرنامج سماف مجتمعي، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..
-
-
-</p>
+إبلاغكم باستلام طلب انضمامكم لبرنامج سماف مجتمعي، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..</p>
 
 
 <p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">
-    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://www.funimada.com/assets/images/cards/big/thank-you-9.gif" alt title width="70%">
+    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://thumbs.gfycat.com/WeepyOddballBagworm-mobile.mp4" alt title width="70%">
 </a>
 </p>
 
 </div>
+
+
 
         
             `
