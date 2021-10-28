@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="css/group.css">
-    
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/main_style.css">
+    <!-- <link rel="stylesheet" href="css/main_style.css"> -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main_style.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -75,7 +75,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="SMAV_MATCH">SMAV MATCH</a>
+                        <a class="nav-link" href="../SMAV_MATCH.html">SMAV MATCH</a>
                     </li>
 
                     <!-- <li class="nav-item">
@@ -89,19 +89,19 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data toggle="dropdown">التسجيل </a>
                         <div class="dropdown-menu">
-                            <a href="sign_up_Individuals" class="dropdown-item">افراد </a>
-                            <a href="sign_up_group" class="dropdown-item">مجموعات</a>
+                            <a href="../sign_up/sign_up_Individuals.html" class="dropdown-item">افراد </a>
+                            <a href="../sign_up/sign_up_group.html" class="dropdown-item">مجموعات</a>
                         </div>
                     </div>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="home">الصفحة الرئيسة  </a>
+                        <a class="nav-link" href="../home.html">الصفحة الرئيسة  </a>
                     </li>
 
 
                 </ul>
             </div>
-            <a class="navbar-brand" href="home">
+            <a class="navbar-brand" href="../home.html">
                 <img alt="SMAV Academy" id="header-logo" src="../images/LOGO-01.png">
             </a>
 
@@ -127,7 +127,7 @@
                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                             </div>
                             <% } %>
-                                <form action="sign_up_group" method="POST" enctype="multipart/form-data">
+                                <form action="./sign_up/sign_up_group.html" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <!-- <div class="col-md-2 mb-3">
                                         </div> -->
@@ -156,41 +156,28 @@
                                                         </div>
 
                                                         <div class="row">
-                                                          <div class="col-lg-6 col-md-9">
-                                                              <input type="text" class="effect-16 col-md-12 inputs" id="lastName_En" name="thirdName_AR"
-                                                                placeholder="الاسم الثلاثي بالعربي " value="" required>
-                                                              <span class="focus-border"></span>
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class="col-md-12 effect-16" id="firstName_En" name="firstName_En" placeholder="الاسم الاول " value="" required>
+                                                                <span class="focus-border"></span>
                                                             </div>
-                                                          </div>
-                                                         
-                              
-                                                          <div class="row">
-                                                            <div class="col-lg-6 col-md-9">
-                                                              <input type="text" class="effect-16 col-md-12 inputs" id="firstName_En" name="firstName_En"
-                                                                placeholder="First Name" value="" required>
-                                                              <span class="focus-border"></span>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class="col-md-12 effect-16" id="middleName_En" name="middleName_En" placeholder="اسم الاب " value="" required>
+                                                                <span class="focus-border"></span>
+
                                                             </div>
-                                                          </div>
-                              
-                              
-                                                          <div class="row">
-                                                            <div class="col-lg-6 col-md-9">
-                                                              <input type="text" class="effect-16 col-md-12 inputs" id="middleName_En" name="middleName_En"
-                                                                placeholder="Middle Name" value="" required>
-                                                              <span class="focus-border"></span>
-                              
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class="col-md-12 effect-16" id="lastName_En" name="lastName_En" placeholder="اللقب " value="" required>
+                                                                <span class="focus-border"></span>
                                                             </div>
-                                                          </div>
-                              
-                              
-                                                          <div class="row">
-                                                            <div class="col-lg-6 col-md-9">
-                                                              <input type="text" class="effect-16 col-md-12 inputs" id="lastName_En" name="lastName_En"
-                                                                placeholder="Last Name" value="" required>
-                                                              <span class="focus-border"></span>
-                                                            </div>
-                                                          </div>
-                              
+                                                        </div>
 
                                                         <div class="row">
 
