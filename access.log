@@ -3489,3 +3489,7 @@
 ::1 - - [28/Oct/2021:13:59:13 +0000] "GET /SMAV_MATCH HTTP/1.1" 200 - "http://localhost:3000/sign_up_group" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
 ::1 - - [28/Oct/2021:14:42:05 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
 ::1 - - [28/Oct/2021:14:42:07 +0000] "GET /sign_up_Individuals HTTP/1.1" 200 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+::1 - - [28/Oct/2021:14:50:24 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+::1 - - [28/Oct/2021:14:50:30 +0000] "GET /sign_up_group HTTP/1.1" 200 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+::1 - - [28/Oct/2021:14:51:01 +0000] "POST /sign_up_group HTTP/1.1" 302 72 "http://localhost:3000/sign_up_group" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+::1 - - [28/Oct/2021:14:51:02 +0000] "GET /sign_up_group HTTP/1.1" 200 - "http://localhost:3000/sign_up_group" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"

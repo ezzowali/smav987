@@ -124,14 +124,14 @@ exports.postRegister=(req,res,next)=>{
 إبلاغكم باستلام طلب انضمامكم لبرنامج سماف مجتمعي، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..</p>
 
 
+
+</div>
+
+       
 <p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">
     <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://i.imgur.com/qILMxkY.jpeg" alt title width="70%">
 </a>
 </p>
-
-</div>
-
-        
             `
             
             
