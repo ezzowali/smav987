@@ -63,7 +63,7 @@ exports.postRegister=(req,res,next)=>{
 
         const email2=req.body.email;
 
-        samvHajjGroup.findOne({ email: email2 })
+        samvHajjGroup.findOne({ email: req.body.email })
         .then(userDoc => {
           if (userDoc.email==req.body.email ) {
             req.flash('error', 'E-Mail exists already, please pick a different one.');
@@ -128,7 +128,7 @@ exports.postRegister=(req,res,next)=>{
 
 
 <p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">
-    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://thumbs.gfycat.com/WeepyOddballBagworm-mobile.mp4" alt title width="70%">
+    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://i.imgur.com/qILMxkY.jpeg" alt title width="70%">
 </a>
 </p>
 
