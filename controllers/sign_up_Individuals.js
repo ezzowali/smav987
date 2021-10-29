@@ -66,89 +66,100 @@ exports.postRegister=(req,res,next)=>{
 
         const email=req.body.email;
 
-        Users.findOne({ email: req.body.email })
+        Users.findOne({ email: req.body.email ,identity_id:req.body.identity_id})
           .then(userDoc => {
-            if (userDoc.email==req.body.email ) {
-              req.flash('error', 'E-Mail exists already, please pick a different one.');
+            if(userDoc==null){
 
-              res.redirect("/sign_up_Individuals")
-          
+              console.log("hjkk");
+              req.flash('error', 'E-Mail exists already, please pick a different one.');
+              res.redirect("/sign_up_Individuals") 
+            }else{
+
+              req.flash('success', 'Success!!');
+              res.redirect("/sign_up_Individuals") 
+
+              return transporter.sendMail({
+                to:email,
+                from:"program_ru@dmet.edu.sa",
+                subject:"SMAV",
+                html:`
+    
+                <p class="esd-block-image" align="center" style="font-size:0"><a href="https://www.smavacadmey.com" target="_blank"><img
+                src="https://i.imgur.com/vUIRe8Z.png" alt style="display: block;" width="562"></a></p>
+    
+    
+    
+    
+    
+            
+                <div style="text-align: center;">
+    
+    
+    
+                
+    
+    <p style="color: #000000;">
+        السلام عليكم ورحمة الله وبركاته
+    
+    </p>
+    
+    
+    
+    
+    <p style="color: #000000;">
+    
+    
+        عزيزي المتطوع
+    
+    </p>
+    
+    <p style="color: 000000;">
+    
+    
+    تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا 
+    إبلاغكم باستلام طلب انضمامكم لبرنامج سماف مجتمعي، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..</p>
+    
+    
+    
+    </div>
+    
+           
+    <p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">
+        <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://i.imgur.com/qILMxkY.jpeg" alt title width="70%">
+    </a>
+    </p>
+                `
+                
+                
+                
+                
+              })
             }
+            console.log(userDoc);
+            
+  
           }).catch(err=>{
 
-  console.log(err);
+  
+            console.log(err);
 
           })
 
+          
+             
 
 
-          return transporter.sendMail({
-            to:email,
-            from:"program_ru@dmet.edu.sa",
-            subject:"SMAV",
-            html:`
-
-            <p class="esd-block-image" align="center" style="font-size:0"><a href="https://www.smavacadmey.com" target="_blank"><img
-            src="https://i.imgur.com/vUIRe8Z.png" alt style="display: block;" width="562"></a></p>
-
-
-
-
-
-        
-            <div style="text-align: center;">
-
-
-
-            
-
-<p style="color: #000000;">
-    السلام عليكم ورحمة الله وبركاته
-
-</p>
-
-
-
-
-<p style="color: #000000;">
-
-
-    عزيزي المتطوع
-
-</p>
-
-<p style="color: 000000;">
-
-
-تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا 
-إبلاغكم باستلام طلب انضمامكم لبرنامج سماف مجتمعي، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..</p>
-
-
-
-</div>
-
-       
-<p class="esd-block-banner" style="position: relative; color: black;" align="center" esdev-config="h2"><a target="_blank">
-    <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://i.imgur.com/qILMxkY.jpeg" alt title width="70%">
-</a>
-</p>
-            `
-            
-            
-            
-            
-          })
-
-        
+     
+         
 
         
       
       })
 
-      req.flash('success', 'Success!!');
+     
 
 
-      res.redirect("/sign_up_Individuals")
+      
   
 
 
