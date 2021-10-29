@@ -41,7 +41,7 @@ div {
 .icon_Vid:hover,
 .icon_about:hover,
 .icon_Number:hover {
-    color: #cddc39;
+    color: #ffc107;
     animation: bounce;
     /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s;
