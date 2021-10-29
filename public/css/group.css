@@ -144,3 +144,35 @@ input[type="text"] {
     color: #4caf50;
     transition: 0.3s;
 }
+
+#video-rules {
+    display: none;
+    color: black;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    padding: 6%;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+#video-rules h5 {
+    text-align: right;
+    color: #0d97cd;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#video-rules p {
+    text-align: right;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+
+/* 
+#btn-rules {
+    background-color: #0d97cd;
+    color: white;
+    border: none;
+} */
