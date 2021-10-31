@@ -26,7 +26,7 @@ const transporter=nodemailer.createTransport(sendgridTransport({
 
 exports.getadminGroup=(req,res,next)=>{
 
-  samvHajjGroup.find().select("reason fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(group=>{
+  samvHajjGroup.find().select(" reason fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(group=>{
 
     res.render("admin/display_group",{
       group:group,
@@ -938,7 +938,7 @@ exports.getAcceptExcel=(req,res,next)=>{
 
   Users.find({accept:"wait"}).select("thirdName_AR firstName_En middleName_En lastName_En  email identity_id \
   age city university Specialty times SCFHS nationality \
-  EducationLevel phone url_video accept skills gender ").then(data=>{
+  EducationLevel phone url_video accept skills gender time ").then(data=>{
 
 
     res.send(JSON.stringify(data))
