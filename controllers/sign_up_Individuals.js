@@ -29,6 +29,9 @@ const saltRounds = 10;
 exports.postRegister=(req,res,next)=>{
 
 
+
+  var today = new Date();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   
   const newUser=new Users({
 
@@ -50,7 +53,8 @@ exports.postRegister=(req,res,next)=>{
     accept:"wait",
     url_video:req.body.url_video,
     nationality:req.body.nationality,
-    skills:req.body.skills
+    skills:req.body.skills,
+    time:time
 
 
 

@@ -37,6 +37,14 @@ exports.getWhatWeDo=(req,res,next)=>{
     message2 = null;
   }
 
+  // var today = new Date();
+  // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'-'today.getHours();
+
+
+
+// console.log(time);
+
+
   res.render('WhatWeDo',{
     message:message,
     message2:message2,

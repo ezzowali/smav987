@@ -36,6 +36,8 @@ exports.getWhoSMAV=(req,res,next)=>{
   else {
     message2 = null;
   }
+
+  console.log(Date);
   res.render('whoSMAV',{
     message:message,
     message2:message2,
