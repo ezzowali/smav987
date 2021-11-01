@@ -42,7 +42,9 @@ exports.getWhatWeDo=(req,res,next)=>{
 
 
 
-// console.log(time);
+
+
+
 
 
   res.render('WhatWeDo',{

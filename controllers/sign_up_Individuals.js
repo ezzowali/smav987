@@ -31,8 +31,8 @@ exports.postRegister=(req,res,next)=>{
 
 
   var today = new Date();
-  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  
+var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + today.getMinutes() ;
+
   const newUser=new Users({
 
     firstName_En:req.body.firstName_En,
