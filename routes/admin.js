@@ -68,6 +68,12 @@ router.post("/refuse_group",loggedin,admin.postRefuseGroup)
 
 router.get("/accept_users_excel",loggedin,admin.getAcceptExcel)
 
+
+router.get("/accept_Groups_excel",loggedin,admin.getAcceptExcel_Groups)
+
+
+
+
 router.get("/display_usersAccept",loggedin,admin.getadminUsersAccept)
 
 router.get("/display_usersRefuse",loggedin,admin.getadminUsersRefuse)
