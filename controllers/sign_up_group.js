@@ -56,8 +56,7 @@ exports.postRegister = (req, res, next) => {
     nationality: req.body.nationality,
     company: req.body.company,
     skills: req.body.skills,
-    time: time
-
+    time:time
 
 
 
