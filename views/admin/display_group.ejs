@@ -172,54 +172,6 @@ margin-bottom: 1rem
 
 
 
-                                                <div class="col-md-2">
-
-
-
-
-                                                    <form action="/accept_group" method="POST">
-                                                        <input type="hidden" name="email" value="<%=group[i].email%>">
-
-                                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-
-
-
-
-                                                        <button type="submit" class="btn"><i class="fa-2x fas fa-check"
-                                                                style="color:#4be702;"></i></button>
-
-                                                    </form>
-
-
-                                                </div>
-
-                                                <div class="col-md-2">
-
-                                                    <form action="/wait_group" method="POST">
-                                                        <input type="hidden" name="email" value="<%=group[i].email%>">
-
-                                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-
-
-
-                                                        <button type="submit" class="btn"><i class="fa-2x fas fa-clock"
-                                                                style="color:#beecdf;"></i></button>
-
-                                                    </form>
-                                                </div>
-
-                                                <div class="col-md-2">
-
-                                              
-                                                  
-
-
-                                                       <button  class="fa-2x fas fa-times  icon_owner" id='add' onclick='ik(this.value);'  value='<%=group[i].email%>'  data-toggle="modal" data-target="#taker_Wa">
-
-
-                                                     
-        
-                                                </div>
 
                                                 
 

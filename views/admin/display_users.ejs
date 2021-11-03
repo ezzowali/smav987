@@ -110,8 +110,8 @@
 
                                                     <div class="col-md-5">
 
-                                                        <iframe width="390" height="245" src=" <%=users[i].url_video%>">
-                                                        </iframe>
+                                                        <!-- <iframe width="390" height="245" src=" <%=users[i].url_video%>">
+                                                        </iframe> -->
                                                     </div>
     
                                   
@@ -171,34 +171,7 @@
     
                                                     </div>
     
-                                                    <div class="col-md-2">
-    
-                                                        <form action="/wait_users" method="POST">
-                                                            <input type="hidden" name="email" value="<%=users[i].email%>">
-                                                            
-                                                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                                                            
-                                        
-                                        
-                                                            <button type="submit" class="btn"><i class="fa-2x fas fa-clock" style="color:#beecdf;"></i></button>
-                                                        
-                                                        </form>
-                                                    </div>
-
-                                                    <div class="col-md-2">
-    
-                                                        <form action="/refuse_users" method="POST">
-                                                            <input type="hidden" name="email" value="<%=users[i].email%>">
-                                                            
-                                                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                                                            
-                                        
-                                                    
-                                        
-                                                            <button type="submit" class="btn"><i class="fa-2x fas  fa-times" style="color:#ca0404;"></i></button>
-                                                        
-                                                        </form>
-                                                    </div>
+                                                 
                                                 </div>
 
                             
