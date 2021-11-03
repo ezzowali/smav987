@@ -65,16 +65,6 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
 
   newUser.save(function (err) {
 
-    // if(userDoc==null){
-
-    //   console.log("hjkk");
-    //   req.flash('error', 'E-Mail exists already, please pick a different one.');
-    //   res.redirect("/sign_up_Individuals") 
-    // }else{
-
-    //   req.flash('success', 'Success!!');
-    //   res.redirect("/sign_up_Individuals") 
-    // }
 
     samvHajjGroup.findOne({ email: req.body.email, identity_id: req.body.identity_id })
       .then(userDoc => {

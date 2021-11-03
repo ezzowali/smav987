@@ -68,7 +68,12 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
 
       newUser.save(function(err){
 
+
+
         const email=req.body.email;
+
+
+       
 
         Users.findOne({ email: req.body.email ,identity_id:req.body.identity_id})
           .then(userDoc => {
@@ -77,13 +82,16 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
               console.log("hjkk");
               req.flash('error', 'E-Mail exists already, please pick a different one.');
               res.redirect("/sign_up_Individuals") 
-            }else{
+            }
+            else{
+
+              
 
               req.flash('success', 'Success!!');
               res.redirect("/sign_up_Individuals") 
 
               return transporter.sendMail({
-                to:email,
+                to:req.body.email,
                 from:"program_ru@dmet.edu.sa",
                 subject:"SMAV",
                 html:`
@@ -139,7 +147,7 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
                 
               })
             }
-            console.log(userDoc);
+           
             
   
           }).catch(err=>{

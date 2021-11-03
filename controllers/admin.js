@@ -28,11 +28,17 @@ exports.getadminGroup=(req,res,next)=>{
 
   samvHajjGroup.find().select(" reason fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(group=>{
 
+
+    len=group.length
     res.render("admin/display_group",{
       group:group,
+      len:len
+      
   
 
     })
+
+    console.log(group.length);
 
 })
 
@@ -216,8 +222,13 @@ exports.getadminUsers=(req,res,next)=>{
 
   Users.find().select("firstName_En middleName_En lastName_En firstName_Ar middleName_Ar lastName_Ar email identity_id SCFHS nationality EducationLevel  phone url_video accept  ").then(users=>{
 
+    len=users.length
+
+
+     
     res.render("admin/display_users",{
       users:users,
+      len:len
   
 
     })
