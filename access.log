@@ -4410,3 +4410,6 @@
 ::1 - - [04/Nov/2021:15:19:36 +0000] "GET /SMAV_HAJJ HTTP/1.1" 200 - "http://localhost:3000/SMAV_RELIEF" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
 ::1 - - [04/Nov/2021:15:19:54 +0000] "GET /sign_up_Individuals HTTP/1.1" 200 - "http://localhost:3000/SMAV_HAJJ" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
 ::1 - - [04/Nov/2021:15:19:57 +0000] "GET /sign_up_group HTTP/1.1" 200 - "http://localhost:3000/sign_up_Individuals" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
+::1 - - [04/Nov/2021:15:26:25 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
+::1 - - [04/Nov/2021:15:26:30 +0000] "GET /smav_match HTTP/1.1" 200 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
+::1 - - [04/Nov/2021:15:26:33 +0000] "GET /SMAV_HAJJ HTTP/1.1" 304 - "http://localhost:3000/smav_match" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
