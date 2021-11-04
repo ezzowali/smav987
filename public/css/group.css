@@ -4,14 +4,14 @@
     font-family: 'Neo Sans Arabic Light';
     font-style: normal;
     font-weight: normal;
-    src: local('Neo Sans Arabic Light'), url('../../neo-sans-arabic-cufonfonts-webfont/NeoSansArabicLight.woff') format('woff');
+    src: local('Neo Sans Arabic Light'), url('neo-sans-arabic-cufonfonts-webfont/NeoSansArabicLight.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Neo Sans Arabic Black';
     font-style: normal;
     font-weight: normal;
-    src: local('Neo Sans Arabic Black'), url('../../neo-sans-arabic-cufonfonts-webfont/NeoSansArabicBlack.woff') format('woff');
+    src: local('Neo Sans Arabic Black'), url('neo-sans-arabic-cufonfonts-webfont/NeoSansArabicBlack.woff') format('woff');
 }
 
 body,

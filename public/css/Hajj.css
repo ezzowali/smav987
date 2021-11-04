@@ -97,22 +97,38 @@ p.ourWayDist {
     float: right; */
 }
 
-#Goals #video-container {
+
+#pathPre {
+    background-color: #f8d53d;
+    color: white;
+    /* background-image: linear-gradient( rgba(22, 218, 15, 0.5) 100% 100%, rgb(31, 31, 31)100%), url("../images/bg-purple.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding: 1% 15%; */
+    padding: 6% 12%;
+    text-align: center;
+    /* color: black; */
+}
+
+
+
+#pathPre #video-container {
     width: 100%;
     margin: 0 auto;
 }
 
-#Goals #video-container video {
+#pathPre #video-container video {
     width: 85%;
     margin-bottom: 3rem;
 }
 
-#Goals .part {
+#pathPre .part {
     float: left;
     width: 25%;
 }
 
-#Goals .paths-image {
+#pathPre .paths-image {
     border-radius: 50%;
     width: 140px;
     height: 140px;
@@ -120,7 +136,7 @@ p.ourWayDist {
     object-position: center center;
 }
 
-#Goals .paths-image+p {
+#pathPre .paths-image+p {
     margin-top: 0.5rem;
     font-weight: bold;
 }

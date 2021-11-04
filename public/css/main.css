@@ -9,21 +9,26 @@ green = #55ba6b
     font-family: 'Neo Sans Arabic Light';
     font-style: normal;
     font-weight: normal;
-    src: local('Neo Sans Arabic Light'), url('../neo-sans-arabic-cufonfonts-webfont/NeoSansArabicLight.woff') format('woff');
+    src: local('Neo Sans Arabic Light'), url('neo-sans-arabic-cufonfonts-webfont/NeoSansArabicLight.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Neo Sans Arabic Black';
     font-style: normal;
     font-weight: normal;
-    src: local('Neo Sans Arabic Black'), url('../neo-sans-arabic-cufonfonts-webfont/NeoSansArabicBlack.woff') format('woff');
+    src: local('Neo Sans Arabic Black'), url('neo-sans-arabic-cufonfonts-webfont/NeoSansArabicLight.woff') format('woff');
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: 'Neo Sans Arabic Black', sans-serif;
+
+    font-family:'Neo Sans Arabic Black';
+    font-weight:normal;
+    font-size:42px"
+    /* font-family: 'Neo Sans Arabic Black', sans-serif; */
+    
 }
 
 label,
