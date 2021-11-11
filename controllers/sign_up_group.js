@@ -132,7 +132,6 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
 
 
 
-
           })
 
         }
