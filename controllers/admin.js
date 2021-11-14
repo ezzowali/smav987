@@ -26,7 +26,7 @@ const transporter=nodemailer.createTransport(sendgridTransport({
 
 exports.getadminGroup=(req,res,next)=>{
 
-  samvHajjGroup.find().select(" reason fullName excel email identity_id email company jopTitle phone TeamSize groupNumber accept").then(group=>{
+  samvHajjGroup.find().select(" thirdName_AR reason fullName excel email identity_id email company gender jopTitle phone TeamSize groupNumber accept").then(group=>{
 
 
     len=group.length
