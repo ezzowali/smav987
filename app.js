@@ -43,6 +43,8 @@ const sign_up_admin=require("./routes/sign_up_admin");
 const whoSMAV=require("./routes/whoSMAV");
 
 const WhatWeDo=require("./routes/WhatWeDo");
+const idea=require("./routes/idea");
+
 
 
 
@@ -162,6 +164,11 @@ app.use(bodyParser.urlencoded({
 
   app.use(admin);
   app.use(sign_up_admin);
+
+  app.use(idea);
+
+
+  
 
 
 

@@ -71,6 +71,13 @@ router.get("/accept_users_excel",loggedin,admin.getAcceptExcel)
 
 router.get("/accept_Groups_excel",loggedin,admin.getAcceptExcel_Groups)
 
+router.get("/ideas_excel",loggedin,admin.getExcel_Ideas)
+
+
+
+
+
+
 
 
 
@@ -82,6 +89,10 @@ router.get("/display_usersRefuse",loggedin,admin.getadminUsersRefuse)
 router.get("/display_usersWait",loggedin,admin.getadminUsersWait)
 
 router.post("/display_usersWait",loggedin,admin.postadminUsersWait)
+
+
+
+
 
 
 

@@ -8,6 +8,9 @@ const xlsx = require("xlsx")//npm install xlsx
 const samvHajjGroup = require('../models/samvHajjGroup');
 const Users = require('../models/Users');
 
+const idea = require('../models/idea');
+
+
 
 const nodemailer=require("nodemailer")
 const sendgridTransport=require("nodemailer-sendgrid-transport");
@@ -1007,7 +1010,27 @@ exports.getAcceptExcel=(req,res,next)=>{
 
 
 
+
+ exports.getExcel_Ideas=(req,res,next)=>{
+
+   
+    
+    
+    idea.find().select("ideaName teamName conrName ideaFeild review  reason time ").then(data=>{
+    
+    
+        res.send(JSON.stringify(data))
+    
+    
+        
+      
+    })
+      
+     }
+
+
  
+
 
 //  https://data.page/json/csv
 
