@@ -56,6 +56,9 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
       res.redirect("idea")
       
     }
+    else{
+      console.log(err);
+    }
     
 
 

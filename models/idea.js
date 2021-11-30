@@ -11,7 +11,7 @@ var ideaSchema =new Schema({
   teamName:String,
   conrName:String,
   
-  ideaFeild:String,
+  ideaFeild:Array,
   review:String,
   reason:String,
   time:String,
