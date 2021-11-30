@@ -14,7 +14,8 @@ var ideaSchema =new Schema({
   ideaFeild:String,
   review:String,
   reason:String,
-  time:String
+  time:String,
+  subGr:String
  
 
 

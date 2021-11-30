@@ -1016,7 +1016,7 @@ exports.getAcceptExcel=(req,res,next)=>{
    
     
     
-    idea.find().select("ideaName teamName conrName ideaFeild review  reason time ").then(data=>{
+    idea.find().select("subGr ideaName teamName conrName ideaFeild review  reason time ").then(data=>{
     
     
         res.send(JSON.stringify(data))

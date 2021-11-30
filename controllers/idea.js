@@ -42,6 +42,7 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
     ideaFeild: req.body.ideaFeild,
     review: req.body.review,
     reason: req.body.reason,
+    subGr:req.body.subGr,
     time:time
 
 
