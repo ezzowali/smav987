@@ -135,7 +135,7 @@ bcrypt.compare(password, admin.password, function(err, result) {
 
     req.session.save(err => {
     console.log(err);
-          res.redirect("/display_group")
+          res.redirect("/display_idea")
 
           
     });

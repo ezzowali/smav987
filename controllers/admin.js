@@ -52,6 +52,31 @@ exports.getadminGroup=(req,res,next)=>{
 }
 
 
+exports.getadminIdea=(req,res,next)=>{
+
+    idea.find().select("").then(group=>{
+  
+  
+      len=group.length
+      res.render("admin/display_idea",{
+        group:group,
+        len:len
+        
+    
+  
+      })
+  
+      console.log(group.length);
+  
+  })
+  
+  
+  
+  
+  
+  }
+
+
 
 
 

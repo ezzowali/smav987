@@ -12,6 +12,11 @@ const loggedin=require("../middleware/loggedin")
 const router = express.Router();
 
 
+
+router.get("/display_idea",loggedin,admin.getadminIdea)
+
+
+
 router.get("/display_group",loggedin,admin.getadminGroup)
 
 router.get("/display_users",loggedin,admin.getadminUsers)
@@ -89,6 +94,9 @@ router.get("/display_usersRefuse",loggedin,admin.getadminUsersRefuse)
 router.get("/display_usersWait",loggedin,admin.getadminUsersWait)
 
 router.post("/display_usersWait",loggedin,admin.postadminUsersWait)
+
+
+
 
 
 
