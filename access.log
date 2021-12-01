@@ -4618,3 +4618,6 @@
 ::1 - - [30/Nov/2021:20:58:55 +0000] "GET /css/main2.css HTTP/1.1" 404 152 "http://localhost:3000/display_idea" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [30/Nov/2021:20:58:56 +0000] "GET /css/gray.png HTTP/1.1" 404 151 "http://localhost:3000/css/item_User.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [30/Nov/2021:20:59:15 +0000] "GET /ideas_excel HTTP/1.1" 200 - "http://localhost:3000/display_idea" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [01/Dec/2021:08:37:22 +0000] "GET /idea HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [01/Dec/2021:08:37:35 +0000] "POST /idea HTTP/1.1" 302 52 "http://localhost:3000/idea" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [01/Dec/2021:08:37:36 +0000] "GET /idea HTTP/1.1" 200 - "http://localhost:3000/idea" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
