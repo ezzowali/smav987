@@ -4621,3 +4621,6 @@
 ::1 - - [01/Dec/2021:08:37:22 +0000] "GET /idea HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [01/Dec/2021:08:37:35 +0000] "POST /idea HTTP/1.1" 302 52 "http://localhost:3000/idea" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [01/Dec/2021:08:37:36 +0000] "GET /idea HTTP/1.1" 200 - "http://localhost:3000/idea" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [01/Dec/2021:15:49:43 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [01/Dec/2021:15:49:47 +0000] "GET /idea HTTP/1.1" 500 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [01/Dec/2021:15:50:31 +0000] "GET /idea HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
