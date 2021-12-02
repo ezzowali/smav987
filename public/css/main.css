@@ -236,6 +236,11 @@ img.about-us-logo {
     font-size: 3rem;
 }
 
+
+/* select#gender option[value="male"]   { background-image:url('../images/blue.jpg');   }
+select#gender option[value="female"] { background-image:url('../images/blue.jpg'); } */
+/* select#gender option[value="others"] { background-image:url(others.png); } */
+
 @media only screen and (max-width: 1024px) {
     a.navbar-brand {
         width: 60%;

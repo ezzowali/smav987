@@ -46,10 +46,28 @@ const WhatWeDo=require("./routes/WhatWeDo");
 const idea=require("./routes/idea");
 
 
+const evaluate=require("./routes/evaluate");
+
+const sign_up_judge=require("./routes/sign_up_judge");
+
+
+
+
+
+
+
+
+
 
 
  
 const admin=require("./routes/admin");
+
+const judge=require("./routes/judge");
+
+
+
+
 
 
 
@@ -167,7 +185,23 @@ app.use(bodyParser.urlencoded({
   app.use(admin);
   app.use(sign_up_admin);
 
+  app.use(sign_up_judge);
+
+  app.use(judge);
+
+
+
+  
+
+  
+
   app.use(idea);
+
+  app.use(evaluate);
+
+
+
+  
 
 
   
