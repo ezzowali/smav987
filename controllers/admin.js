@@ -1067,7 +1067,7 @@ exports.getAcceptExcel=(req,res,next)=>{
    
     
     
-    evaluate.find().select("goals evaluate activity continous applicate creativity  impaction time poster doctors note total_marks ").then(data=>{
+    evaluate.find().select("goals evaluate activity continous applicate creativity impaction time poster doctors note total_marks email").then(data=>{
     
     
         res.send(JSON.stringify(data))
