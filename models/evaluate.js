@@ -19,6 +19,7 @@ var evaluateSchema =new Schema({
     doctors:String,
     time:String,
     note:String,
+    total_marks:String,
 
     email:String
 

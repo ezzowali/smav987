@@ -58,6 +58,7 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
     doctors:req.body.doctors,
     email:req.body.email,
     note:req.body.note,
+    total_marks:req.body.total_marks,
     time:time
 
 

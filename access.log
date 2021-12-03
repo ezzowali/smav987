@@ -5126,3 +5126,8 @@
 ::1 - - [03/Dec/2021:13:20:00 +0000] "POST /login_judge HTTP/1.1" 302 62 "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [03/Dec/2021:13:20:01 +0000] "GET /evaluate HTTP/1.1" 200 - "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [03/Dec/2021:13:21:38 +0000] "GET /evaluate HTTP/1.1" 200 - "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [03/Dec/2021:14:11:06 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [03/Dec/2021:14:11:12 +0000] "GET /login_judge HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [03/Dec/2021:14:11:17 +0000] "POST /login_judge HTTP/1.1" 302 62 "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [03/Dec/2021:14:11:18 +0000] "GET /evaluate HTTP/1.1" 200 - "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [03/Dec/2021:14:13:02 +0000] "GET /evaluate HTTP/1.1" 200 - "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
