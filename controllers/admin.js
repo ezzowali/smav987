@@ -10,6 +10,9 @@ const Users = require('../models/Users');
 
 const idea = require('../models/idea');
 
+const evaluate = require('../models/evaluate');
+
+
 
 
 const nodemailer=require("nodemailer")
@@ -1053,6 +1056,28 @@ exports.getAcceptExcel=(req,res,next)=>{
       
      }
 
+
+
+
+     
+
+
+ exports.getExcel_Evaluation=(req,res,next)=>{
+
+   
+    
+    
+    evaluate.find().select("goals evaluate activity continous applicate creativity  impaction time poster doctors note total_marks ").then(data=>{
+    
+    
+        res.send(JSON.stringify(data))
+    
+    
+        
+      
+    })
+      
+     }
 
  
 
