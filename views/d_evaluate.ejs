@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
 
 <head>
@@ -146,7 +148,7 @@
 
 
 
-                                        <div class="col-lg-6 col-md-9">
+                                        <div class="col-lg-12 ">
                                             <br><br>
                                             <br><br>
 
@@ -154,7 +156,7 @@
                                             <div class="frontside">
                                                 <div class="card ">
                                                     <div class="card-body text-center">
-                                                        <h4 class="card-title "> <i class="fas fa-star"></i> تسجيل
+                                                        <h4 class="card-title ">  تسجيل
                                                             بيانات المبادرة </h4>
 
 
@@ -170,12 +172,40 @@
 
                                                                 <select id="dlist"
                                                                     class="col-md-12 select effect-16 inputs"
-                                                                    onChange="swapImage()">
+                                                                    onChange="swapImage()" name="poster">
 
                                                                     <option value=""> اختر البوستر </option>
 
-                                                                    <option value="images/blue.jpg">Brain Dump</option>
-                                                                    <option value="images/purple.jpg">ASP</option>
+                                                                    <option value="images/poster/blue2.jpg">A</option>
+                                                                    <option value="images/poster/B.jpg">B</option>
+
+
+                                                                    <option value="images/poster/C.jpg">C</option>
+                                                                    <option value="images/poster/D.jpg">D</option>
+
+
+
+                                                                    <option value="images/poster/E.jpg">E</option>
+                                                                    <option value="images/poster/F.jpg">F</option>
+
+
+                                                                    <option value="images/poster/G.jpg">G</option>
+                                                                    <option value="images/poster/H.jpg">H</option>
+
+
+
+                                                                    <option value="images/poster/I.jpg">I</option>
+                                                                    <option value="images/poster/J.jpg">J</option>
+
+
+
+                                                                    <option value="images/poster/K.jpg">K</option>
+                                                                    <option value="images/poster/L.jpg">L</option>
+
+
+
+                                                                    <option value="images/poster/M.jpg">M</option>
+                                                                    <option value="images/poster/N.jpg">N</option>
 
                                                                 </select>
 
@@ -183,56 +213,56 @@
                                                             </div>
                                                         </div>
 
+                                                  
+                                                       
+
+
+
+
 
 
                                                         <div class="row">
                                                             <div class="col-md-9 mb-3">
-                                                                <select name="subGr"
-                                                                    class="col-md-12 select effect-16 inputs" required
-                                                                    onchange='CheckingOther_spe(this.value);'>
-                                                                    <option value="">--   اسم المقيم --</option>
-                                                                    <option value="1"> 1 </option>
-                                                                    <option value="2"> 2 </option>
-                                                                    <option value="3"> 3 </option>
-                                                                    <option value="4"> 4 </option>
-                                                                    <option value="5"> 5 </option>
+                                                                <select name="doctors"
+                                                                class="col-md-12 select effect-16 inputs" required
+                                                                onchange='CheckingOther_spe(this.value);'>
+                                                                <option value="">--   اسم المقيم --</option>
+                                                                <option value="د.جاسر الشهري"> د.جاسر الشهري   </option>
+                                                                <option value="د.نجوى الغامدي "> د.نجوى الغامدي  </option>
+                                                                <option value="أ.د. عمر كاسولي ">أ.د. عمر كاسولي </option>
+                                                                <option value="د.صالح الانصاري"> د.صالح الانصاري</option>
+                                                                <option value="م.محمود فلاتة"> م.محمود فلاتة</option>
 
-                                                                    <option value="6"> 6 </option>
-                                                                    <option value="7"> 7 </option>
-                                                                    <option value="8"> 8 </option>
-                                                                    <option value="9"> 9 </option>
-                                                                    <option value="10"> 10 </option>
+                                                                <option value="د.محمد الشبيلي القرني"> د.محمد الشبيلي القرني  </option>
+                                                        
 
 
 
 
 
-                                                                </select>
+                                                            </select>
                                                                 <span class="focus-border"></span>
                                                             </div>
                                                         </div>
 
 
+                                                        <hr>
 
+                                                        <h1> </h1>
 
-                                                        <h1>التقييم </h1>
+                                                        <h4 class="card-title ">  التقييم
+                                                              </h4>
+                                                        <br>
 
                                                         <div class="row">
 
                                                             <div class="col-md-9 mb-3">
 
 
+                                               
+                                                                <h2 style="font-weight: bolder; font-size: medium;">الهدف من المشروع</h2>
+
                                                                
-
-
-                                              
-
-
-
-                                                              
-
-
-                                                                <p>الهدف من المشروع</p>
 
 
                                                                 <label class="container">من ٠ إلى ١٩
@@ -259,6 +289,8 @@
                                                             </div>
                                                         </div>
 
+                                                        <hr>
+
 
                                                         <div class="row">
 
@@ -266,23 +298,26 @@
 
 
 
-                                                                <p>تقييم الاحتياج</p>
+                                                       
+
+                                                                <h2 style="font-weight: bolder; font-size: medium;">تقييم الاحتياج</h2>
+
 
 
                                                                 <label class="container">من ٠ إلى ١٩
-                                                                    <input type="radio" name="Goals" value="9" />
+                                                                    <input type="radio" name="evaluate" value="9" />
 
                                                                 </label>
                                                                 <label class="container">من ٢٠ إلى ٣٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="evaluate">
 
                                                                 </label>
                                                                 <label class="container">من ٤٠ إلى ٥٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="evaluate">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                                 <label class="container">٦٠ واكثر
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="evaluate">
                                                                     <span class="checkmark"></span>
                                                                 </label>
 
@@ -293,7 +328,7 @@
                                                             </div>
                                                         </div>
 
-
+                                                        <hr>
 
 
 
@@ -312,23 +347,28 @@
                                                               
 
 
-                                                                <p> الفعالية من حيث التكلفة</p>
+
+                                                                <h2 style="font-weight: bolder; font-size: medium;">الفعالية من حيث التكلفة</h2>
+
+
+
+                                                                
 
 
                                                                 <label class="container">من ٠ إلى ١٩
-                                                                    <input type="radio" name="Goals" value="9" />
+                                                                    <input type="radio" name="activity" value="9" />
 
                                                                 </label>
                                                                 <label class="container">من ٢٠ إلى ٣٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="activity">
 
                                                                 </label>
                                                                 <label class="container">من ٤٠ إلى ٥٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="activity">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                                 <label class="container">٦٠ واكثر
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="activity">
                                                                     <span class="checkmark"></span>
                                                                 </label>
 
@@ -339,7 +379,7 @@
                                                             </div>
                                                         </div>
 
-
+                                                        <hr>
 
 
 
@@ -358,23 +398,29 @@
                                                               
 
 
-                                                                <p>الاستدامة</p>
+                                                    
+
+
+                                                                <h2 style="font-weight: bolder; font-size: medium;">الاستدامة</h2>
+
+
+                                                                
 
 
                                                                 <label class="container">من ٠ إلى ١٩
-                                                                    <input type="radio" name="Goals" value="9" />
+                                                                    <input type="radio" name="continous" value="9" />
 
                                                                 </label>
                                                                 <label class="container">من ٢٠ إلى ٣٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="continous">
 
                                                                 </label>
                                                                 <label class="container">من ٤٠ إلى ٥٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="continous">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                                 <label class="container">٦٠ واكثر
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="continous">
                                                                     <span class="checkmark"></span>
                                                                 </label>
 
@@ -386,6 +432,54 @@
                                                         </div>
 
 
+                                                        <hr>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+
+
+                                                               
+
+
+                                              
+
+
+
+                                                              
+
+
+
+
+                                                                <h2 style="font-weight: bolder; font-size: medium;">قابلية التطبيق</h2>
+
+
+
+                                                                <label class="container">من ٠ إلى ١٩
+                                                                    <input type="radio" name="applicate" value="9" />
+
+                                                                </label>
+                                                                <label class="container">من ٢٠ إلى ٣٩
+                                                                    <input type="radio" name="applicate">
+
+                                                                </label>
+                                                                <label class="container">من ٤٠ إلى ٥٩
+                                                                    <input type="radio" name="applicate">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                                <label class="container">٦٠ واكثر
+                                                                    <input type="radio" name="applicate">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+
+
+
+
+
+                                                            </div>
+                                                        </div>
+
+                                                        <hr>
 
 
                                                         <div class="row">
@@ -403,23 +497,26 @@
                                                               
 
 
-                                                                <p>قابلية التطبيق</p>
+                                                   
+
+                                                                <h2 style="font-weight: bolder; font-size: medium;">الابتكار</h2>
+
 
 
                                                                 <label class="container">من ٠ إلى ١٩
-                                                                    <input type="radio" name="Goals" value="9" />
+                                                                    <input type="radio" name="creativity" value="9" />
 
                                                                 </label>
                                                                 <label class="container">من ٢٠ إلى ٣٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="creativity">
 
                                                                 </label>
                                                                 <label class="container">من ٤٠ إلى ٥٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="creativity">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                                 <label class="container">٦٠ واكثر
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="creativity">
                                                                     <span class="checkmark"></span>
                                                                 </label>
 
@@ -431,6 +528,7 @@
                                                         </div>
 
 
+                                                        <hr>
 
 
                                                         <div class="row">
@@ -448,69 +546,26 @@
                                                               
 
 
-                                                                <p>الابتكار</p>
+                                                        
+
+                                                                <h2 style="font-weight: bolder; font-size: medium;">التأثير</h2>
+
 
 
                                                                 <label class="container">من ٠ إلى ١٩
-                                                                    <input type="radio" name="Goals" value="9" />
+                                                                    <input type="radio" name="impaction" value="9" />
 
                                                                 </label>
                                                                 <label class="container">من ٢٠ إلى ٣٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="impaction">
 
                                                                 </label>
                                                                 <label class="container">من ٤٠ إلى ٥٩
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="impaction">
                                                                     <span class="checkmark"></span>
                                                                 </label>
                                                                 <label class="container">٦٠ واكثر
-                                                                    <input type="radio" name="Goals">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-
-
-
-
-
-                                                            </div>
-                                                        </div>
-
-
-
-
-
-                                                        <div class="row">
-
-                                                            <div class="col-md-9 mb-3">
-
-
-                                                               
-
-
-                                              
-
-
-
-                                                              
-
-
-                                                                <p>التأثير</p>
-
-
-                                                                <label class="container">من ٠ إلى ١٩
-                                                                    <input type="radio" name="Goals" value="9" />
-
-                                                                </label>
-                                                                <label class="container">من ٢٠ إلى ٣٩
-                                                                    <input type="radio" name="Goals">
-
-                                                                </label>
-                                                                <label class="container">من ٤٠ إلى ٥٩
-                                                                    <input type="radio" name="Goals">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                                <label class="container">٦٠ واكثر
-                                                                    <input type="radio" name="Goals">
+                                                                    <input type="radio" name="impaction">
                                                                     <span class="checkmark"></span>
                                                                 </label>
 
@@ -523,7 +578,7 @@
 
 
                                                         
-
+                                                        <hr>
 
 
 
@@ -567,6 +622,33 @@
     <%- include('./includes/footer') %>
 
         <script type="text/javascript">
+
+
+function insertAfter(referenceNode, newNode) 
+{
+     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+function createText() 
+{
+     var selectValue = document.getElementById("money").value;
+     var CashInput = document.getElementById("cash");
+     if (selectValue == "pound") 
+     {
+         var text = "GBP";
+     } else if (selectValue == "doll") {
+         text = "USD";
+     }
+     document.getElementById("currency").innerText = text;
+}
+createText();
+
+
+
+
+
+
+
             $(document).ready(function () {
                 $("#btn-rules").click(function () {
                     $('#video-rules').toggle();

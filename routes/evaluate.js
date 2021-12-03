@@ -5,6 +5,8 @@ const express = require('express');
 
 const evaluateController = require('../controllers/evaluate');
 
+const loggedin=require("../middleware/loggedin")
+
 
 const router = express.Router();
 
@@ -13,9 +15,9 @@ const router = express.Router();
 
 
 
-router.get("/evaluate",evaluateController.getEvaluate)
+router.get("/evaluate",loggedin,evaluateController.getEvaluate)
 
-router.post("/evaluate",evaluateController.postEvaluate)
+router.post("/evaluate",loggedin,evaluateController.postEvaluate)
 
 
 

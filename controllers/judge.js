@@ -62,6 +62,7 @@ exports.postEvaluate = (req, res, next) => {
       impaction:req.body.impaction,
       poster:req.body.poster,
       name:req.body.name,
+      email:req.body.email,
       time:time
   
   

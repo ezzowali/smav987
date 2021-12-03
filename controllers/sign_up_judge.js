@@ -42,7 +42,7 @@ exports.postRegister=(req,res,next)=>{
 
         judge.findOne({ email: email })
         .then(userDoc => {
-          if (email==req.body.email ) {
+          if (userDoc.email==req.body.email ) {
             req.flash('error', 'E-Mail exists already, please pick a different one.');
 
             res.redirect("/sign_up_judge")
@@ -133,7 +133,7 @@ bcrypt.compare(password, judge.password, function(err, result) {
 
     req.session.save(err => {
     console.log(err);
-          res.redirect("/judge")
+          res.redirect("/evaluate")
 
           
     });
@@ -146,7 +146,7 @@ bcrypt.compare(password, judge.password, function(err, result) {
     console.log("error_users");
 
     req.flash('error', 'Invalid email or password.');
-    return res.redirect('/');
+    return res.redirect('login_judge');
 
    
 
