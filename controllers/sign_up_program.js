@@ -58,7 +58,7 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
     skills: req.body.skills,
     time:time,
 
-    fitting_days:req.body.fitting_days,
+    
     image_tarkhees:req.body.image_tarkhees,
     vaccin:req.body.vaccin,
     cv:req.body.cv
