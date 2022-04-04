@@ -21,7 +21,7 @@ var smav2Schema =new Schema({
   university:String,
   EducationLevel:Array,
   Specialty:Array,
-  SCFHS:String,
+  scfhs:String,
   times:String,
   accept:String,
   url_video:String,
@@ -29,7 +29,11 @@ var smav2Schema =new Schema({
   nationality:String,
   company:String,
   skills:String,
-  time:String
+  time:String,
+  fitting_days:String,
+  image_tarkhees:String,
+  vaccin:String,
+  cv:String
 
 
 

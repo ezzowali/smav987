@@ -5,16 +5,6 @@ const path = require('path');
 
 const idea = require('../models/idea');
 
-const judge = require('../models/judge');
-
-const evaluate = require('../models/evaluate');
-
-
-
-
-
-
-
 var randomBytes = require('randombytes');
 const nodemailer = require("nodemailer")
 const sendgridTransport = require("nodemailer-sendgrid-transport")
@@ -44,7 +34,7 @@ exports.postEvaluate = (req, res, next) => {
   var today = new Date();
 var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + today.getMinutes() ;
 
-  const newUser = new evaluate({
+  const newUser = new idea({
 
   
     goals: req.body.goals,
@@ -55,10 +45,7 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
     creativity: req.body.creativity,
     impaction:req.body.impaction,
     poster:req.body.poster,
-    doctors:req.body.doctors,
-    email:req.body.email,
-    note:req.body.note,
-    total_marks:req.body.total_marks,
+    name:req.body.name,
     time:time
 
 
@@ -89,10 +76,6 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
 
 }
 
-
-
-
-
 exports.getEvaluate = (req, res, next) => {
 
   let message = req.flash('error');
@@ -113,33 +96,11 @@ exports.getEvaluate = (req, res, next) => {
   else {
     message2 = null;
   }
+  res.render('evaluate', {
+    message: message,
+    message2: message2
 
-  evaluate.find().select("poster email").then(evaluate=>{
-
-
-
-  judge.findById(req.session.judge._id).select("email name").then(judge=>{
-
-    res.render('judge/evaluate', {
-      message: message,
-      message2: message2,
-      judge:judge,
-      evaluate:evaluate
-
-  
-    });
-
-
-
-})
-
-})
-
-
-
-
-  
-
+  });
 }
 
 

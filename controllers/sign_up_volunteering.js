@@ -1,22 +1,15 @@
 
 
+
 const fs = require('fs');
 const path = require('path');
-
-const samvHajjGroup = require('../models/samvHajjGroup');
+const flash = require('connect-flash');
+const Users = require('../models/Users');
 
 var randomBytes = require('randombytes');
+
 const nodemailer = require("nodemailer")
 const sendgridTransport = require("nodemailer-sendgrid-transport")
-
-
-const bcrypt = require('bcryptjs');
-const adminDb = require('../models/adminDb');
-
-
-const saltRounds = 10;
-
-
 
 
 const transporter = nodemailer.createTransport(sendgridTransport({
@@ -27,14 +20,20 @@ const transporter = nodemailer.createTransport(sendgridTransport({
 
 }))
 
+const bcrypt = require('bcryptjs');
+
+
+const saltRounds = 10;
+
 
 exports.postRegister = (req, res, next) => {
 
 
-  var today = new Date();
-var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + today.getMinutes() ;
 
-  const newUser = new samvHajjGroup({
+  var today = new Date();
+  var time = today.getDay() + "/" + today.getMonth() + "-" + today.getHours() + ":" + today.getMinutes();
+
+  const newUser = new Users({
 
     firstName_En: req.body.firstName_En,
     middleName_En: req.body.middleName_En,
@@ -48,7 +47,7 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
     Specialty: req.body.Specialty,
     EducationLevel: req.body.EducationLevel,
     email: req.body.email,
-    SCFHS: req.body.SCFHS,
+    scfhs: req.body.scfhs,
     times: req.body.times,
     identity_id: req.body.identity_id,
     accept: "wait",
@@ -56,26 +55,44 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
     nationality: req.body.nationality,
     company: req.body.company,
     skills: req.body.skills,
-    time:time
+    time: time,
+
+    fitting_days: req.body.fitting_days,
+    image_tarkhees: req.body.image_tarkhees,
+    vaccin: req.body.vaccin,
+    cv: req.body.cv
+
+
+
+
+
+
 
 
 
   })
 
 
+
+
   newUser.save(function (err) {
 
 
-    samvHajjGroup.findOne({ email: req.body.email, identity_id: req.body.identity_id })
+
+    Users.findOne({ email: req.body.email, identity_id: req.body.identity_id })
       .then(userDoc => {
         if (userDoc == null) {
+
+          console.log("hjkk");
           req.flash('error', 'E-Mail exists already, please pick a different one.');
+          res.redirect("/sign_up_volunteering")
+        }
+        else {
 
-          res.redirect("/sign_up_group")
 
-        } else {
+
           req.flash('success', 'Success!!');
-          res.redirect("/sign_up_group")
+          res.redirect("/sign_up_volunteering")
 
           return transporter.sendMail({
             to: req.body.email,
@@ -115,8 +132,9 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
     <p style="color: 000000;">
     
     
-    تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة المجتمع، كما يسعدنا 
-    إبلاغكم باستلام طلب انضمامكم لبرنامج سماف مجتمعي، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله..</p>
+    تشكر لكم الأكاديمية السعودية للتطوع الصحي روح العطاء وحب الخير والمبادرة لخدمة ضيوف الرحمن في هذا الشهر المبارك، كما يسعدنا إبلاغكم بأنه تم استلام طلب انضمامكم للبرنامج التطوعي الرمضاني لموسم هذا العام، وسنوافيكم بالرد خلال الأيام القادمة إن شاء الله
+    
+    </p>
     
     
     
@@ -127,14 +145,15 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
         <img class="adapt-img esdev-stretch-width esdev-banner-rendered" src="https://i.imgur.com/qILMxkY.jpeg" alt title width="70%">
     </a>
     </p>
-
                 `
 
 
 
-          })
 
+          })
         }
+
+
 
       }).catch(err => {
 
@@ -160,33 +179,54 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
 
 
 
+
+
+
 }
 
 exports.getRegister = (req, res, next) => {
 
   let message = req.flash('error');
-
   let message2 = req.flash('success');
+
+
+  console.log(message);
+
   if (message.length > 0) {
     message = message[0];
 
-  } else {
+    console.log(message);
+
+  }
+  else {
     message = null;
+
 
   }
 
   if (message2.length > 0) {
+
     message2 = message2[0];
 
+    console.log(message2);
+
+  } else {
+    message2 = null
   }
-  else {
-    message2 = null;
-  }
-  res.render('sign_up/sign_up_group', {
+
+  res.render('sign_up/hajj_sign_up_Individuals', {
     message: message,
-    message2: message2
+    message2: message2,
+
+
 
   });
 }
+
+
+
+//////
+
+
 
 

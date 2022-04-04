@@ -34,9 +34,9 @@ var morgan = require('morgan')
 
 
 
-const sign_up_Individuals  = require('./routes/sign_up_Individuals');
+const sign_up_Individuals  = require('./routes/sign_up_volunteering');
 
-const sign_up_group=require("./routes/sign_up_group");
+const sign_up_program=require("./routes/sign_up_program");
 
 const sign_up_admin=require("./routes/sign_up_admin");
 
@@ -49,40 +49,10 @@ const idea=require("./routes/idea");
 const evaluate=require("./routes/evaluate");
 
 const sign_up_judge=require("./routes/sign_up_judge");
-
-
-
-
-
-
-
-
-
-
-
  
 const admin=require("./routes/admin");
 
 const judge=require("./routes/judge");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const Users = require('./models/Users');
 
@@ -180,7 +150,7 @@ app.use(bodyParser.urlencoded({
   app.use(sign_up_Individuals);
   app.use(whoSMAV);
   app.use(WhatWeDo);
-  app.use(sign_up_group);
+  app.use(sign_up_program);
 
   app.use(admin);
   app.use(sign_up_admin);

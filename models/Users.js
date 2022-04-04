@@ -30,7 +30,12 @@ var smav2Schema =new Schema({
   identity_id:{ type: Number, required: true, unique: true },
   nationality:String,
   skills:String,
-  time:String
+  time:String,
+  fitting_days:String,
+  image_tarkhees:String,
+  vaccin:String,
+  cv:String
+
 
  
   

@@ -60,22 +60,6 @@
                 </li>
 
 
-
-    <%  if(isAuthenticated){%>
-        <form id="magic-form" action="/logout" method="POST">
-          <input type="hidden" name="_csrf" value=<%=csrfToken%> 
-          <input type="text">
-  
-  </form>
-  <%  }%>
-
-                <a href="/logout"
-                onclick="event.preventDefault();
-                document.getElementById('magic-form').submit();">
-                تسجيل خروج 
-              </a>
-
-
             </ul>
         </div>
         <a class="navbar-brand" href="/">

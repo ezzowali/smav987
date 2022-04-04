@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>SMAV | Register</title>
+    <link rel="icon" class="animated fadeinUp" href="images/SMAV_LOGO.png" type="images/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/group.css?v1=1">
+    <link rel="stylesheet" href="css/main.css?v1=1">
+    <link rel="stylesheet" href="css/main_style.css?v1=1">
+
+    <link rel="stylesheet" type="text/css"
+    href="css/neo-sans-arabic-cufonfonts-webfont/style.css?v1=1"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap" rel="stylesheet">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .inputs {
+            float: left;
+        }
+
+         ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #cccccc;
+            opacity: 1;
+            /* Firefox */
+        }
+        
+         :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #cccccc;
+        }
+        
+         ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #cccccc;
+        }
+        
+        select {
+            color: #cccccc;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top bg-light animated fadeinUp">
+
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">مسارات الأكاديمية</a>
+
+                    <div class="dropdown-menu">
+                        <a href="/SMAV_HAJJ" class="dropdown-item">SMAV Hajj </a>
+                        <a href="/smav_match" class="dropdown-item">Smav Match</a>
+                        <a href="/SMAV_RELIEF" class="dropdown-item">Smav Relief</a>
+
+                    </div>
+
+
+                </li>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data toggle="dropdown">التسجيل </a>
+                    <div class="dropdown-menu">
+                        <a href="/sign_up_volunteering" class="dropdown-item">الفرصة التطوعية  </a>
+                        <a href="/sign_up_program" class="dropdown-item">البرنامج الاعدادي للمتطوع الصحي </a>
+                    </div>
+                </div>
+
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/">الصفحة الرئيسة </a>
+                </li>
+
+     
+
+
+            </ul>
+        </div>
+
+        <a class="navbar-brand" href="/">
+            <img alt="SMAV Academy" id="header-logo" src="images/LOGO-01.png">
+        </a>
+
+    </div>
+</nav>
+
+
+
+
+
+    <section id="registerForm">
+
+        <div class="container ">
+
+            <div class="card-body content">
+                <br><br>
+                <% if (message) { %>
+                    <div class="col-lg-6 col-md-9 alert alert-danger alert-dismissible fade show">
+                        <strong>!!خطأ</strong> الايميل مستخدم
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    </div>
+                    <% } %>
+                        <% if (message2) { %>
+                            <div class="col-lg-6 col-md-9 alert alert-success alert-dismissible fade show">
+                                تم تسجيلك
+                                <a href="/"> للعودة من هنا </a>
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            </div>
+                            <% } %>
+
+                                <form action="sign_up_program" method="POST" enctype="multipart/form-data">
+                                    <div class="row">
+
+
+
+                                        <div class="col-lg-6 col-md-9">
+                                            <br><br>
+                                            <br><br>
+
+                                            <div class="frontside">
+                                                <div class="card ">
+                                                    <div class="card-body text-center">
+                                                        <h4 class="card-title "> <i class="fas fa-user-circle"></i> المعلومات الشخصية </h4>
+
+                                                       
+
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class="col-md-12  effect-16" id="lastName_En" name="thirdName_AR" placeholder="الاسم الثلاثي بالعربي " value=""
+                                                                
+                                                                required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class="col-md-12  effect-16" id="firstName_En" name="firstName_En" 
+                                                                onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)"
+                                                                placeholder="First Name" value="" required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class=" col-md-12 effect-16" id="middleName_En" name="middleName_En"
+                                                                onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)"
+                                                                placeholder="Middle Name" value="" required>
+                                                                <span class="focus-border"></span>
+
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class=" col-md-12  effect-16" id="lastName_En" name="lastName_En"
+                                                                onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)"
+                                                                placeholder="Last Name" value="" required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+
+                                                                <input type="number" class="col-md-12 effect-16 inputs" name="identity_id" min="1000000000" placeholder="رقم الهوية" value="" required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+
+                                                                <input type="number" class="col-md-12 effect-16 inputs" min="500000000" name="phone" value="" placeholder=" رقم الجوال " required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+
+                                                                <input type="email" class="col-md-12 effect-16 inputs" name="email" value="" placeholder="البريد الالكتروني   " required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+                                                            <div class="col-md-9 mb-3">
+
+                                                                <select name="nationality" class="col-md-12 select effect-16 inputs" required>
+                                                                    <option value="">-- الجنسية --</option>
+                                                                    <option value="saudi">Saudi</option>
+                                                                    <option value="afghan">Afghan</option>
+                                                                    <option value="albanian">Albanian</option>
+                                                                    <option value="algerian">Algerian</option>
+                                                                    <option value="american">American</option>
+                                                                    <option value="andorran">Andorran</option>
+                                                                    <option value="angolan">Angolan</option>
+                                                                    <option value="antiguans">Antiguans</option>
+                                                                    <option value="argentinean">Argentinean</option>
+                                                                    <option value="armenian">Armenian</option>
+                                                                    <option value="australian">Australian</option>
+                                                                    <option value="austrian">Austrian</option>
+                                                                    <option value="azerbaijani">Azerbaijani</option>
+                                                                    <option value="bahamian">Bahamian</option>
+                                                                    <option value="bahraini">Bahraini</option>
+                                                                    <option value="bangladeshi">Bangladeshi</option>
+                                                                    <option value="barbadian">Barbadian</option>
+                                                                    <option value="barbudans">Barbudans</option>
+                                                                    <option value="batswana">Batswana</option>
+                                                                    <option value="belarusian">Belarusian</option>
+                                                                    <option value="belgian">Belgian</option>
+                                                                    <option value="belizean">Belizean</option>
+                                                                    <option value="beninese">Beninese</option>
+                                                                    <option value="bhutanese">Bhutanese</option>
+                                                                    <option value="bolivian">Bolivian</option>
+                                                                    <option value="bosnian">Bosnian</option>
+                                                                    <option value="brazilian">Brazilian</option>
+                                                                    <option value="british">British</option>
+                                                                    <option value="bruneian">Bruneian</option>
+                                                                    <option value="bulgarian">Bulgarian</option>
+                                                                    <option value="burkinabe">Burkinabe</option>
+                                                                    <option value="burmese">Burmese</option>
+                                                                    <option value="burundian">Burundian</option>
+                                                                    <option value="cambodian">Cambodian</option>
+                                                                    <option value="cameroonian">Cameroonian</option>
+                                                                    <option value="canadian">Canadian</option>
+                                                                    <option value="cape verdean">Cape Verdean</option>
+                                                                    <option value="central african">Central African
+                                                                    </option>
+                                                                    <option value="chadian">Chadian</option>
+                                                                    <option value="chilean">Chilean</option>
+                                                                    <option value="chinese">Chinese</option>
+                                                                    <option value="colombian">Colombian</option>
+                                                                    <option value="comoran">Comoran</option>
+                                                                    <option value="congolese">Congolese</option>
+                                                                    <option value="costa rican">Costa Rican</option>
+                                                                    <option value="croatian">Croatian</option>
+                                                                    <option value="cuban">Cuban</option>
+                                                                    <option value="cypriot">Cypriot</option>
+                                                                    <option value="czech">Czech</option>
+                                                                    <option value="danish">Danish</option>
+                                                                    <option value="djibouti">Djibouti</option>
+                                                                    <option value="dominican">Dominican</option>
+                                                                    <option value="dutch">Dutch</option>
+                                                                    <option value="east timorese">East Timorese</option>
+                                                                    <option value="ecuadorean">Ecuadorean</option>
+                                                                    <option value="egyptian">Egyptian</option>
+                                                                    <option value="emirian">Emirian</option>
+                                                                    <option value="equatorial guinean">Equatorial
+                                                                        Guinean</option>
+                                                                    <option value="eritrean">Eritrean</option>
+                                                                    <option value="estonian">Estonian</option>
+                                                                    <option value="ethiopian">Ethiopian</option>
+                                                                    <option value="fijian">Fijian</option>
+                                                                    <option value="filipino">Filipino</option>
+                                                                    <option value="finnish">Finnish</option>
+                                                                    <option value="french">French</option>
+                                                                    <option value="gabonese">Gabonese</option>
+                                                                    <option value="gambian">Gambian</option>
+                                                                    <option value="georgian">Georgian</option>
+                                                                    <option value="german">German</option>
+                                                                    <option value="ghanaian">Ghanaian</option>
+                                                                    <option value="greek">Greek</option>
+                                                                    <option value="grenadian">Grenadian</option>
+                                                                    <option value="guatemalan">Guatemalan</option>
+                                                                    <option value="guinea-bissauan">Guinea-Bissauan
+                                                                    </option>
+                                                                    <option value="guinean">Guinean</option>
+                                                                    <option value="guyanese">Guyanese</option>
+                                                                    <option value="haitian">Haitian</option>
+                                                                    <option value="herzegovinian">Herzegovinian</option>
+                                                                    <option value="honduran">Honduran</option>
+                                                                    <option value="hungarian">Hungarian</option>
+                                                                    <option value="icelander">Icelander</option>
+                                                                    <option value="indian">Indian</option>
+                                                                    <option value="indonesian">Indonesian</option>
+                                                                    <option value="iranian">Iranian</option>
+                                                                    <option value="iraqi">Iraqi</option>
+                                                                    <option value="irish">Irish</option>
+                                                            
+                                                                    <option value="italian">Italian</option>
+                                                                    <option value="ivorian">Ivorian</option>
+                                                                    <option value="jamaican">Jamaican</option>
+                                                                    <option value="japanese">Japanese</option>
+                                                                    <option value="jordanian">Jordanian</option>
+                                                                    <option value="kazakhstani">Kazakhstani</option>
+                                                                    <option value="kenyan">Kenyan</option>
+                                                                    <option value="kittian and nevisian">Kittian and
+                                                                        Nevisian</option>
+                                                                    <option value="kuwaiti">Kuwaiti</option>
+                                                                    <option value="kyrgyz">Kyrgyz</option>
+                                                                    <option value="laotian">Laotian</option>
+                                                                    <option value="latvian">Latvian</option>
+                                                                    <option value="lebanese">Lebanese</option>
+                                                                    <option value="liberian">Liberian</option>
+                                                                    <option value="libyan">Libyan</option>
+                                                                    <option value="liechtensteiner">Liechtensteiner
+                                                                    </option>
+                                                                    <option value="lithuanian">Lithuanian</option>
+                                                                    <option value="luxembourger">Luxembourger</option>
+                                                                    <option value="macedonian">Macedonian</option>
+                                                                    <option value="malagasy">Malagasy</option>
+                                                                    <option value="malawian">Malawian</option>
+                                                                    <option value="malaysian">Malaysian</option>
+                                                                    <option value="maldivan">Maldivan</option>
+                                                                    <option value="malian">Malian</option>
+                                                                    <option value="maltese">Maltese</option>
+                                                                    <option value="marshallese">Marshallese</option>
+                                                                    <option value="mauritanian">Mauritanian</option>
+                                                                    <option value="mauritian">Mauritian</option>
+                                                                    <option value="mexican">Mexican</option>
+                                                                    <option value="micronesian">Micronesian</option>
+                                                                    <option value="moldovan">Moldovan</option>
+                                                                    <option value="monacan">Monacan</option>
+                                                                    <option value="mongolian">Mongolian</option>
+                                                                    <option value="moroccan">Moroccan</option>
+                                                                    <option value="mosotho">Mosotho</option>
+                                                                    <option value="motswana">Motswana</option>
+                                                                    <option value="mozambican">Mozambican</option>
+                                                                    <option value="namibian">Namibian</option>
+                                                                    <option value="nauruan">Nauruan</option>
+                                                                    <option value="nepalese">Nepalese</option>
+                                                                    <option value="new zealander">New Zealander</option>
+                                                                    <option value="ni-vanuatu">Ni-Vanuatu</option>
+                                                                    <option value="nicaraguan">Nicaraguan</option>
+                                                                    <option value="nigerien">Nigerien</option>
+                                                                    <option value="north korean">North Korean</option>
+                                                                    <option value="northern irish">Northern Irish
+                                                                    </option>
+                                                                    <option value="norwegian">Norwegian</option>
+                                                                    <option value="omani">Omani</option>
+                                                                    <option value="pakistani">Pakistani</option>
+                                                                    <option value="palauan">Palauan</option>
+                                                                    <option value="panamanian">Panamanian</option>
+                                                                    <option value="papua new guinean">Papua New Guinean
+                                                                    </option>
+                                                                    <option value="paraguayan">Paraguayan</option>
+                                                                    <option value="peruvian">Peruvian</option>
+                                                                    <option value="polish">Polish</option>
+                                                                    <option value="portuguese">Portuguese</option>
+                                                                    <option value="qatari">Qatari</option>
+                                                                    <option value="romanian">Romanian</option>
+                                                                    <option value="russian">Russian</option>
+                                                                    <option value="rwandan">Rwandan</option>
+                                                                    <option value="saint lucian">Saint Lucian</option>
+                                                                    <option value="salvadoran">Salvadoran</option>
+                                                                    <option value="samoan">Samoan</option>
+                                                                    <option value="san marinese">San Marinese</option>
+                                                                    <option value="sao tomean">Sao Tomean</option>
+                                                                    <option value="scottish">Scottish</option>
+                                                                    <option value="senegalese">Senegalese</option>
+                                                                    <option value="serbian">Serbian</option>
+                                                                    <option value="seychellois">Seychellois</option>
+                                                                    <option value="sierra leonean">Sierra Leonean
+                                                                    </option>
+                                                                    <option value="singaporean">Singaporean</option>
+                                                                    <option value="slovakian">Slovakian</option>
+                                                                    <option value="slovenian">Slovenian</option>
+                                                                    <option value="solomon islander">Solomon Islander
+                                                                    </option>
+                                                                    <option value="somali">Somali</option>
+                                                                    <option value="south african">South African</option>
+                                                                    <option value="south korean">South Korean</option>
+                                                                    <option value="spanish">Spanish</option>
+                                                                    <option value="sri lankan">Sri Lankan</option>
+                                                                    <option value="sudanese">Sudanese</option>
+                                                                    <option value="surinamer">Surinamer</option>
+                                                                    <option value="swazi">Swazi</option>
+                                                                    <option value="swedish">Swedish</option>
+                                                                    <option value="swiss">Swiss</option>
+                                                                    <option value="syrian">Syrian</option>
+                                                                    <option value="taiwanese">Taiwanese</option>
+                                                                    <option value="tajik">Tajik</option>
+                                                                    <option value="tanzanian">Tanzanian</option>
+                                                                    <option value="thai">Thai</option>
+                                                                    <option value="togolese">Togolese</option>
+                                                                    <option value="tongan">Tongan</option>
+                                                                    <option value="trinidadian or tobagonian">
+                                                                        Trinidadian or Tobagonian</option>
+                                                                    <option value="tunisian">Tunisian</option>
+                                                                    <option value="turkish">Turkish</option>
+                                                                    <option value="tuvaluan">Tuvaluan</option>
+                                                                    <option value="ugandan">Ugandan</option>
+                                                                    <option value="ukrainian">Ukrainian</option>
+                                                                    <option value="uruguayan">Uruguayan</option>
+                                                                    <option value="uzbekistani">Uzbekistani</option>
+                                                                    <option value="venezuelan">Venezuelan</option>
+                                                                    <option value="vietnamese">Vietnamese</option>
+                                                                    <option value="welsh">Welsh</option>
+                                                                    <option value="yemenite">Yemenite</option>
+                                                                    <option value="zambian">Zambian</option>
+                                                                    <option value="zimbabwean">Zimbabwean</option>
+                                                                </select>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <select name="gender" class="col-md-12 select effect-16 inputs" required>
+                                                                    <option value="">-- الجنس --</option>
+                                                                    <option value="male">ذكر </option>
+                                                                    <option value="female">انثى </option>
+                                                                </select>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+
+
+                                                                <input type="number" class="col-md-12 effect-16 inputs" id="age" name="age" placeholder="العمر " min="14" max="100" required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <select name="city" class="col-md-12 select effect-16 inputs" onchange="CheckingOther_city(this.value);" required>
+                                                                    <option value="">-- المدينة --</option>
+
+                                                                    <option value="Riyadh">الرياض</option>
+                                                                    <option value="Makkah">مكة المكرمة</option>
+                                                                    <option value="jeddah">جدة</option>
+                                                                    <option value="Dammam">دمام</option>
+                                                                    <option value="Abha">أبها</option>
+                                                                    <option value="Taif">الطائف</option>
+                                                                    <option value="Qassim">القصيم</option>
+                                                                    <option value="Jazan">جازان</option>
+                                                                    <option value="Medinah">المدينة المنورة</option>
+                                                                    <option value="Eastern">الشرقية</option>
+                                                                    <option value="Najran">نجران</option>
+                                                                    <option value="Al-Baha">الباحة</option>
+                                                                    <option value="Tabouk">تبوك</option>
+                                                                    <option value="Aseer">عسير</option>
+                                                                    <option value="other">غير ذلك</option>
+                                                                </select>
+
+                                                                <input type="text" id="other_id_city" name="city" style='display:none;' />
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <h4 class="card-title academic">
+                                                            <i class="fas fa-university"></i> المعلومات الأكاديمية
+                                                        </h4>
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <select name="EducationLevel" class="col-md-12 select effect-16 inputs" onchange='CheckingOther_eduLev(this.value);' required>
+                                                                    <option value="">-- الدرجة العلمية --</option>
+                                                                    <option value="1st year student"> طالب 
+                                                                         </option>
+                                                                    <option value="2nd year student">حديث التخرج
+                                                                         </option>
+                                                                    <option value="3rd year student"> متدرب 
+                                                                         </option>
+                                                                    <option value="4th year student "> طبيب مقيم 
+                                                                    </option>
+
+                                                                    <option value="5th year student">طبيب أخصائي 
+                                                                    </option>
+                                                                    <option value="6th year student"> طبيب استشاري 
+                                                                    </option>
+                                                                    <option value="other"> أخرى </option>
+
+                                                                    <input type="text" id="other_id_EducationLevel"
+                                                                        name="EducationLevel" style='display:none;' />
+
+
+
+                                                                </select>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <select name="Specialty" class="col-md-12 select effect-16 inputs" required onchange='CheckingOther_spe(this.value);'>
+                                                                    <option value="">-- التخصص --</option>
+                                                                    <option value="medicine "> طب </option>
+                                                                    <option value="dentistry ">طب الأسنان </option>
+                                                                    <option value="pharmacy"> الصيدلة </option>
+                                                                    <option value="nursing "> التمريض </option>
+                                                                    <option value="public health"> الصحة العامة
+                                                                    </option>
+                                                                    <option value="Applied Medical Sciences">العلوم
+                                                                        الطبية التطبيقية </option>
+                                                                    <option value="other"> غير ذلك </option>
+                                                                </select>
+
+                                                                <input type="text" id="other_id_Specialty" name="Specialty" style='display:none;' />
+
+                                                                <span class="focus-border"></span>
+                                                            </div>
+
+                                                        </div>
+
+
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+
+                                                                <input type="text" class="col-md-12 effect-16" name="university" placeholder="مكان العمل " value="" required>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class="col-md-12 effect-16" name="scfhs" value="" placeholder="رقم هيئة التخصصات الصحية (اختياري) ">
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <select name="times" class="col-md-12 select effect-16 inputs" required>
+                                                                    <option value="">  عدد مرات التطوع </option>
+                                                                    <option value="1 "> 1 </option>
+                                                                    <option value="2 ">2 </option>
+                                                                    <option value="3"> 3 </option>
+                                                                    <option value="4 "> 4 </option>
+                                                                    <option value="5"> 5 </option>
+                                                                    <option value="6">6 </option>
+                                                                    <option value="7"> 7 </option>
+                                                        
+                                                                    <option value="8 "> 8 </option>
+                                                                    <option value="9"> 9 </option>
+                                                                    <option value="10">10 </option>
+                                                                    <option value="10>"> 10> </option>
+                                                                </select>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                        
+                                                            <div class="col-md-9 mb-3">
+                                                                <select name="fitting_days" class="col-md-12 select effect-16 inputs" required>
+                                                                    <option value="">  الأيام المناسبة للتطوع </option>
+                                                                    <option value="1 "> ليلة 21 </option>
+                                                                    <option value="2 "> ليلة 22 </option>
+                                                                    <option value="3"> ليلة 23 </option>
+                                                                    <option value="4 "> ليلة 24 </option>
+                                                                    <option value="5"> ليلة 25 </option>
+                                                                    <option value="6">ليلة 26 </option>
+                                                                    <option value="7"> ليلة 27 </option>
+                                                        
+                                                                    <option value="8 "> ليلة 28 </option>
+                                                                    <option value="9"> ليلة29 </option>
+                                                            
+                                                                </select>
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <input type="text" class="col-md-12 effect-16" name="SCFHS" value="" placeholder=" جهة التطوع " required >
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div>
+
+                                                        
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <label for="img" class="col-md-12 effect-16" style="text-align: right "  class="col-md-12 select effect-16 inputs" name="" required >: إرفاق صورة الترخيص</label>
+                                                                <input type="text" class="col-md-12 effect-16" name="image_tarkhees" placeholder="رابط الصوره " value="" required>
+                                                               <!--<small><a href="https://imgbb.com/">تحويل الصوره لرابط</a></small>-->
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        
+                                                        <div class="row">
+
+                                                            <div class="col-md-9 mb-3">
+                                                                <label for="img" class="col-md-12 effect-16" style="text-align: right "  class="col-md-12 select effect-16 inputs" name="vaccin" required >: إرفاق صورة من إتمام جرعات التحصين </label>
+                                                                <input type="text" class="col-md-12 effect-16" name="vaccin" placeholder="رابط الصوره " value="" required>
+                                                                <small><a href="https://imgbb.com/">تحويل الصور لرابط من هنا</a></small> 
+                                                                <span class="focus-border"></span>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div>
+                                                            <div class="row">
+
+                                                                <div class="col-md-9 mb-3">
+                                                                    <label for="img" class="col-md-12 effect-16" style="text-align: right "  class="col-md-12 select effect-16 inputs" name="cv" required >: إرفاق صورة من السيرة الذاتية </label>
+                                                                    <input type="text" class="col-md-12 effect-16" name="cv" placeholder="رابط الصوره " value="" required>
+                                                                    <small><a href="https://imgbb.com/">تحويل الصور لرابط من هنا</a></small> 
+                                                                    <span class="focus-border"></span>
+                                                                </div>
+                                                            </div>
+                                   
+                                                        <div class="row">
+
+                                                            <div class="col-md-12">
+
+                                                                <p style="text-align: center;">
+                                                                    <br>
+                                                                    <br>
+                                                                    <label class="btn btn-dark" id="btn-rules">شروط الانضمام للفرصة التطوعية</label>
+
+                                                                </p>
+
+                                                                <div id="video-rules">
+
+                                                                    <h5 style="text-align: right; ">
+                      شروط الانضمام للفرصة التطوعية                                                   
+                                                                    </h5>
+                                                                    <p style=" ">
+                                                                        1- توفر الترخيص بمزاولة المهنة من هيئة التخصصات الصحية للمتطوعين من الأطباء والممارسين
+                                                                        المصنفين.
+
+                                                                    </p>
+                                                                    <p style="">
+                                                                     2- الخبرة في التطوع للمتطوعين من الطلاب والطالبات
+
+                                                                    </p>
+
+
+                                                                    <p style=" ">
+                                                                        3- حضور البرنامج التدريبي الإعدادي الذي تقدمه الأكاديمية من 14 - 16 رمضان )أونلاين يومين – عملي
+                                                                        يوم واحد(
+
+                                                                    </p>
+
+
+                                                                    <p style=" ">
+                                                                        4- الالتزام بالسمت العام الذي يتوافق مع التعاليم الدينية ويراعي حشمة المسجد والبيت الحرام .
+
+                                                                    </p>
+
+                                                                    
+
+                                                                    <br>
+
+                                                                </div>
+
+
+                                                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                                <button type="submit" class="btn btn-info">تسجيل</button>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+
+
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </form>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../includes/footer') %>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#btn-rules").click(function() {
+                    $('#video-rules').toggle();
+
+
+                });
+            });
+
+            function CheckingOther_city(val) {
+                var element_city = document.getElementById('other_id_city');
+                var element_eduLev = document.getElementById('other_id_EducationLevel');
+
+                if (val == 'other')
+                    element_city.style.display = 'block';
+                else
+                    element_city.style.display = 'none';
+
+
+            }
+
+
+            function CheckingOther_eduLev(val) {
+                var element_eduLev = document.getElementById('other_id_EducationLevel');
+
+                if (val == 'other')
+                    element_eduLev.style.display = 'block';
+                else
+                    element_eduLev.style.display = 'none';
+
+
+            }
+
+            function CheckingOther_spe(val) {
+                var element_spe = document.getElementById('other_id_Specialty');
+                if (val == 'other')
+                    element_spe.style.display = 'block';
+                else
+                    element_spe.style.display = 'none';
+            }
+        </script>
+
+</body>
+
+</html>

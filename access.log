@@ -5201,3 +5201,4 @@
 ::1 - - [03/Dec/2021:17:01:14 +0000] "GET /login_judge HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [03/Dec/2021:17:01:20 +0000] "POST /login_judge HTTP/1.1" 302 62 "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 ::1 - - [03/Dec/2021:17:01:21 +0000] "GET /evaluate HTTP/1.1" 200 - "http://localhost:3000/login_judge" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+::1 - - [04/Apr/2022:20:25:47 +0000] "GET / HTTP/1.1" 304 - "http://localhost:3000/sign_up_program" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36"
