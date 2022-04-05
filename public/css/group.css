@@ -23,6 +23,7 @@ p,
 label,
 button {
     font-family: 'Neo Sans Arabic Light', sans-serif;
+   /* font-weight: bold;*/
 }
 
 #registerForm {
@@ -68,7 +69,7 @@ button {
     margin-bottom: 2rem !important;
     font-family: 'Neo Sans Arabic Light', sans-serif;
     direction: rtl;
-    color: #0d97cd;
+    color: #0d85b5;
 }
 
 form {
