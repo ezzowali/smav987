@@ -31,7 +31,7 @@ var smav2Schema =new Schema({
   nationality:String,
   skills:String,
   time:String,
-  fitting_days:String,
+  fitting_days:Array,
   image_tarkhees:String,
   vaccin:String,
   cv:String
