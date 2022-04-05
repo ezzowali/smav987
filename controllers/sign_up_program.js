@@ -60,8 +60,7 @@ var time = today.getDay()+"/"+today.getMonth()+"-"+today.getHours() + ":" + toda
 
     
     image_tarkhees:req.body.image_tarkhees,
-    vaccin:req.body.vaccin,
-    cv:req.body.cv
+   
 
 
 
@@ -198,7 +197,7 @@ exports.getRegister = (req, res, next) => {
   else {
     message2 = null;
   }
-  res.render('sign_up/hajj_sign_up_group', {
+  res.render('sign_up/sign_up_program', {
     message: message,
     message2: message2
 

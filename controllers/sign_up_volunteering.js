@@ -214,7 +214,7 @@ exports.getRegister = (req, res, next) => {
     message2 = null
   }
 
-  res.render('sign_up/hajj_sign_up_Individuals', {
+  res.render('sign_up/sign_up_volunteering', {
     message: message,
     message2: message2,
 
